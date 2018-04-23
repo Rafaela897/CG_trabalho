@@ -1,3 +1,3 @@
-/home/rafaela/Desktop/cg/tp3i/build/CMakeFiles/rebuild_cache.dir
-/home/rafaela/Desktop/cg/tp3i/build/CMakeFiles/edit_cache.dir
-/home/rafaela/Desktop/cg/tp3i/build/CMakeFiles/class9.dir
+/home/rafaela/Desktop/CG_trabalho/tp3i/build/CMakeFiles/rebuild_cache.dir
+/home/rafaela/Desktop/CG_trabalho/tp3i/build/CMakeFiles/edit_cache.dir
+/home/rafaela/Desktop/CG_trabalho/tp3i/build/CMakeFiles/class9.dir

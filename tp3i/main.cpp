@@ -118,7 +118,7 @@ void prepareTorus(float raioI , float raioE , int rings, int slices)
 
 	float *v;
 
-	v = (float *)malloc(sizeof(float) * 2 * 3 * 3 * rings * slices*slices);
+	v = (float *)malloc(sizeof(float) * 2 * 3 * 3 * rings * slices * slices);
 
 	int vertex = 0;
 
@@ -573,39 +573,40 @@ void prepareTorus(float raioI , float raioE , int rings, int slices)
 	}
 
 
-/*void drawSphere() {
+void drawSphere() {
 
 	glBindBuffer(GL_ARRAY_BUFFER,vertices);
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}*/
+}
 
 /*
+
 void drawTorus() {
 
 	glBindBuffer(GL_ARRAY_BUFFER,vertices);
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}*/
-/*
+}
+
 void drawBox() {
 
 	glBindBuffer(GL_ARRAY_BUFFER,vertices);
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}*/
+}
 
-/*
+
 void drawCone() {
 
 	glBindBuffer(GL_ARRAY_BUFFER,vertices);
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}*/
+}
 
 
 void drawPlane() {
@@ -614,7 +615,7 @@ void drawPlane() {
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}
+}*/
 
 void renderScene(void) {
 
@@ -628,26 +629,22 @@ void renderScene(void) {
 
 	glLoadIdentity();
 
-	gluLookAt(camX,camY,camZ,
+	gluLookAt(camX,camY,camZ, 
 		      0.0,0.0,0.0,
 			  0.0f,1.0f,0.0f);
 
-	//drawSphere();
-	//drawTorus();
-	//drawBox();
-	//drawCone();
-	drawPlane();
-
+	drawSphere();
+	drawTorus();
 
 	frame++;
-	time=glutGet(GLUT_ELAPSED_TIME);
-	if (time - timebase > 1000) {
-		fps = frame*1000.0/(time-timebase);
-		timebase = time;
-		frame = 0;
+	time=glutGet(GLUT_ELAPSED_TIME); 
+	if (time - timebase > 1000) { 
+		fps = frame*1000.0/(time-timebase); 
+		timebase = time; 
+		frame = 0; 
 		sprintf(s, "FPS: %f6.2", fps);
 		glutSetWindowTitle(s);
-	}
+	} 
 
 // End of frame
 	glutSwapBuffers();
@@ -655,29 +652,29 @@ void renderScene(void) {
 
 
 
-void processKeys(int key, int xx, int yy)
+void processKeys(int key, int xx, int yy) 
 {
 	switch(key) {
-
-		case GLUT_KEY_RIGHT:
+	
+		case GLUT_KEY_RIGHT: 
 						alfa -=0.1; break;
 
-		case GLUT_KEY_LEFT:
+		case GLUT_KEY_LEFT: 
 						alfa += 0.1; break;
 
-		case GLUT_KEY_UP :
+		case GLUT_KEY_UP : 
 						beta += 0.1f;
 						if (beta > 1.5f)
 							beta = 1.5f;
 						break;
 
-		case GLUT_KEY_DOWN:
-						beta -= 0.1f;
+		case GLUT_KEY_DOWN: 
+						beta -= 0.1f; 
 						if (beta < -1.5f)
 							beta = -1.5f;
 						break;
 
-		case GLUT_KEY_PAGE_DOWN : radius -= 0.1f;
+		case GLUT_KEY_PAGE_DOWN : radius -= 0.1f; 
 			if (radius < 0.1f)
 				radius = 0.1f;
 			break;
@@ -693,7 +690,7 @@ void processKeys(int key, int xx, int yy)
 
 void initGL() {
 
-// OpenGL settings
+// OpenGL settings 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 
@@ -701,11 +698,7 @@ void initGL() {
 	sphericalToCartesian();
 	glEnableClientState(GL_VERTEX_ARRAY);
 
-	//prepareSphere(1,20,20);
-	//prepareTorus(0.3,1,100,50);
-	//prepareBox(1,1,1,1);
-	//prepareCone(2,1,40,40);
-	preparePlane(2,2);
+	prepareSphere(2,20,20);
 }
 
 
@@ -717,7 +710,7 @@ int main(int argc, char **argv) {
 	glutInitWindowPosition(100,100);
 	glutInitWindowSize(320,320);
 	glutCreateWindow("CG@DI-UM");
-
+		
 // callback registration
 	glutDisplayFunc(renderScene);
 	glutIdleFunc(renderScene);
@@ -726,15 +719,15 @@ int main(int argc, char **argv) {
 // keyboard callback registration
 	glutSpecialFunc(processKeys);
 
-#ifndef __APPLE__
+#ifndef __APPLE__	
 // init GLEW
 	glewInit();
-#endif
+#endif	
 
 
 	initGL();
 
 	glutMainLoop();
-
+	
 	return 1;
 }
