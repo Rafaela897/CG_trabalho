@@ -588,7 +588,7 @@ void drawTorus() {
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-]*/
+}*/
 /*
 void drawBox() {
 
