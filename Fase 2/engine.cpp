@@ -15,7 +15,7 @@
 #include "tinyxml2.h"
 #include "tinyxml2.cpp"
 
-
+int timebase = 0, frame = 0;
 
 using namespace tinyxml2;
 using namespace std;
@@ -311,6 +311,11 @@ void changeSize(int w, int h) {
 * lastCanDraw: Flag para controlar os PopMatrix e PushMatrix. Necess�rio porque os grupos podem ter mais que uma transforma��o.
 */
 void renderScene(void) {
+
+	float fps;
+	int time;
+	char s[64];
+
 	// clear buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -394,6 +399,17 @@ Ver Teste 2 para exemplo concreto.
 	for(localLevel=vecTransform[i-1].level; localLevel >= 0;localLevel--){
 		glPopMatrix();
 	}
+
+	frame++;
+	time=glutGet(GLUT_ELAPSED_TIME); 
+	if (time - timebase > 1000) { 
+		fps = frame*1000.0/(time-timebase); 
+		timebase = time; 
+		frame = 0; 
+		sprintf(s, "FPS: %f6.2", fps);
+		glutSetWindowTitle(s);
+	}
+
 	glutSwapBuffers();
 }
 
@@ -514,6 +530,7 @@ int main(int argc, char **argv)
 // Callback registration for keyboard processing
 	glutKeyboardFunc(Regularkey);
 	glutSpecialFunc(processSpecialKeys);
+
 
 //  OpenGL settings
 	glEnable(GL_DEPTH_TEST);

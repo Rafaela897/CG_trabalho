@@ -1,0 +1,1100 @@
+<scene>
+	<group>
+			<scale X="0.3" Y="0.3" Z="0.3"/>
+			<color R="1.0" G="0.84" B="0.0" />
+			<models>
+				<model file="sun.3d" />
+			</models>
+
+			<group>
+				<color R="0.91" G="0.59" B="0.48" />
+				<translate time="29.3233" >
+					<point X = " -109.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " -54.5 " Y = " 0.0 " Z = " 94.503 " />
+					<point X = " 54.5 " Y = " 0.0 " Z = " 94.503 " />
+					<point X = " 109.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " 54.5 " Y = " 0.0 " Z = " -94.503 " />
+					<point X = " -54.5 " Y = " 0.0 " Z = " -94.503 " />
+				</translate>
+
+
+				<rotate time="19.387"  axisY="1" />
+
+				<models>
+					<model file="mercury.3d" />
+				</models>
+			</group>
+
+			<group>
+				<color R="0.96" G="0.64" B="0.38" />
+				<translate time="74.9000" >
+					<point X = " -142.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " -71.0 " Y = " 0.0 " Z = " 123.114 " />
+					<point X = " 71.0 " Y = " 0.0 " Z = " 123.114 " />
+					<point X = " 142.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " 71.0 " Y = " 0.0 " Z = " -123.114 " />
+					<point X = " -71.0 " Y = " 0.0 " Z = " -123.114 " />
+				</translate>
+				<rotate time="74.9"  axisY="1" />
+				<models>
+					<model file="venus.3d" />
+				</models>
+				</group>
+
+				<group>
+					<color R="0.12" G="0.56" B="1" />
+					<translate time="121.6667" >
+						<point X = " -170.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -85.0 " Y = " 0.0 " Z = " 147.39 " />
+						<point X = " 85.0 " Y = " 0.0 " Z = " 147.39 " />
+						<point X = " 170.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 85.0 " Y = " 0.0 " Z = " -147.39 " />
+						<point X = " -85.0 " Y = " 0.0 " Z = " -147.39 " />
+					</translate>
+					<rotate time="0.3333"  axisY="1" />
+					<models>
+						<model file="earth.3d" />
+					</models>
+				</group>
+
+				<group>
+					<translate time="121.6667" >
+						<point X = " -170.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -85.0 " Y = " 0.0 " Z = " 147.39 " />
+						<point X = " 85.0 " Y = " 0.0 " Z = " 147.39 " />
+						<point X = " 170.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 85.0 " Y = " 0.0 " Z = " -147.39 " />
+						<point X = " -85.0 " Y = " 0.0 " Z = " -147.39 " />
+					</translate>
+					<color R="0.75" G="0.75" B="0.75" />
+					<translate time="27,77" >
+						<point X = " -8.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -4.0 " Y = " 0.0 " Z = " 6.936 " />
+						<point X = " 4.0 " Y = " 0.0 " Z = " 6.936 " />
+						<point X = " 8.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 4.0 " Y = " 0.0 " Z = " -6.936 " />
+						<point X = " -4.0 " Y = " 0.0 " Z = " -6.936 " />
+					</translate>
+					<models>
+						<model file="lua.3d" />
+					</models>
+				</group>
+				
+
+				<group>
+					<color R="0.72" G="0.25" B="0.05" />
+					<translate time="128.9933" >
+						<point X = " -222.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -111.0 " Y = " 0.0 " Z = " 192.474 " />
+						<point X = " 111.0 " Y = " 0.0 " Z = " 192.474 " />
+						<point X = " 222.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 111.0 " Y = " 0.0 " Z = " -192.474 " />
+						<point X = " -111.0 " Y = " 0.0 " Z = " -192.474 " />
+					</translate>
+					<rotate time="0.3333"  axisY="1" />
+					<models>
+						<model file="mars.3d" />
+					</models>
+				</group>
+				<group>
+					<translate time="128.9933" >
+						<point X = " -222.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -111.0 " Y = " 0.0 " Z = " 192.474 " />
+						<point X = " 111.0 " Y = " 0.0 " Z = " 192.474 " />
+						<point X = " 222.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 111.0 " Y = " 0.0 " Z = " -192.474 " />
+						<point X = " -111.0 " Y = " 0.0 " Z = " -192.474 " />
+					</translate>
+					<color R="0.75" G="0.75" B="0.75" />
+					<translate  Z="-4" />
+					<scale X="0.5" Y= "0.5" Z="0.5" />
+					<models>
+					<model file="marsmoons.3d" />
+					</models>
+					<group>
+						<color R="0.75" G="0.75" B="0.75" />
+						<translate  X="3" Z="5" />
+						<scale X="2" Y= "2" Z="2" />
+						<models>
+							<model file="marsmoons.3d" />
+						</models>
+					</group>
+				</group>
+
+				<group>
+					<color R = "0.952330" G="0.103313" B="0.549072"/>
+					<translate  X="191.758469"  Z ="138.043442"/>
+					<scale X="0.185782" Y="0.057791" Z ="0.108321"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.453966" G="0.545476" B="0.831839"/>
+					<translate  X="217.190643"  Z ="-137.659271"/>
+					<scale X="0.000219" Y="0.135608" Z ="0.401660"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.645833" G="0.516471" B="0.807327"/>
+					<translate  X="251.446335"  Z ="76.640015"/>
+					<scale X="0.088464" Y="0.484733" Z ="0.319858"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.652094" G="0.383397" B="0.064198"/>
+					<translate  X="-6.753205"  Z ="-258.503723"/>
+					<scale X="0.435943" Y="0.323733" Z ="0.309195"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.792406" G="0.880535" B="0.349454"/>
+					<translate  X="-230.753891"  Z ="-116.632416"/>
+					<scale X="0.348421" Y="0.345115" Z ="0.013749"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.034289" G="0.504383" B="0.064536"/>
+					<translate  X="-112.278709"  Z ="225.343460"/>
+					<scale X="0.068585" Y="0.455665" Z ="0.400695"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.999749" G="0.984895" B="0.419447"/>
+					<translate  X="231.739777"  Z ="93.377594"/>
+					<scale X="0.247683" Y="0.460180" Z ="0.047641"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.877459" G="0.244693" B="0.297128"/>
+					<translate  X="204.031387"  Z ="128.591660"/>
+					<scale X="0.495059" Y="0.217530" Z ="0.290741"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.646971" G="0.018773" B="0.966472"/>
+					<translate  X="-178.786514"  Z ="175.482346"/>
+					<scale X="0.043571" Y="0.076508" Z ="0.077334"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.824278" G="0.576037" B="0.379334"/>
+					<translate  X="239.114441"  Z ="-71.854210"/>
+					<scale X="0.126943" Y="0.158182" Z ="0.060952"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.230286" G="0.375380" B="0.799414"/>
+					<translate  X="263.786011"  Z ="58.227123"/>
+					<scale X="0.105757" Y="0.204454" Z ="0.340783"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.691816" G="0.685548" B="0.838331"/>
+					<translate  X="-178.987946"  Z ="-188.094681"/>
+					<scale X="0.057889" Y="0.153107" Z ="0.226772"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.810681" G="0.997726" B="0.693673"/>
+					<translate  X="-215.427902"  Z ="-87.783157"/>
+					<scale X="0.431614" Y="0.469614" Z ="0.219716"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.615597" G="0.399104" B="0.096433"/>
+					<translate  X="-231.685745"  Z ="88.698997"/>
+					<scale X="0.465024" Y="0.280386" Z ="0.066924"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.822814" G="0.876221" B="0.700086"/>
+					<translate  X="254.310745"  Z ="-71.353348"/>
+					<scale X="0.499369" Y="0.311288" Z ="0.361949"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.773885" G="0.814720" B="0.742199"/>
+					<translate  X="-18.594528"  Z ="-250.050858"/>
+					<scale X="0.497417" Y="0.355068" Z ="0.105143"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.026302" G="0.668591" B="0.438871"/>
+					<translate  X="179.133591"  Z ="-200.264908"/>
+					<scale X="0.075040" Y="0.484253" Z ="0.344699"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.219239" G="0.211741" B="0.986500"/>
+					<translate  X="-41.359600"  Z ="240.997452"/>
+					<scale X="0.275324" Y="0.386435" Z ="0.151746"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.191615" G="0.008040" B="0.061070"/>
+					<translate  X="77.802315"  Z ="-219.142929"/>
+					<scale X="0.216475" Y="0.471681" Z ="0.031803"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.905364" G="0.186964" B="0.236543"/>
+					<translate  X="-234.449951"  Z ="107.323006"/>
+					<scale X="0.089097" Y="0.022658" Z ="0.124343"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.731426" G="0.661124" B="0.444887"/>
+					<translate  X="-200.455444"  Z ="-118.736832"/>
+					<scale X="0.438845" Y="0.444210" Z ="0.273875"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.527131" G="0.600022" B="0.649494"/>
+					<translate  X="-88.337738"  Z ="-246.263077"/>
+					<scale X="0.106486" Y="0.061603" Z ="0.012569"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.976665" G="0.832001" B="0.180288"/>
+					<translate  X="106.138748"  Z ="209.783463"/>
+					<scale X="0.260384" Y="0.144433" Z ="0.329039"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.541220" G="0.397027" B="0.473839"/>
+					<translate  X="-112.004013"  Z ="-236.643646"/>
+					<scale X="0.318051" Y="0.312591" Z ="0.073133"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.296000" G="0.438046" B="0.779053"/>
+					<translate  X="213.210449"  Z ="135.665649"/>
+					<scale X="0.312890" Y="0.245602" Z ="0.245184"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.888604" G="0.163770" B="0.693303"/>
+					<translate  X="240.748245"  Z ="117.667686"/>
+					<scale X="0.013285" Y="0.270809" Z ="0.247281"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.114795" G="0.361843" B="0.831588"/>
+					<translate  X="-195.059601"  Z ="187.031616"/>
+					<scale X="0.398195" Y="0.478384" Z ="0.346750"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.760837" G="0.474452" B="0.523391"/>
+					<translate  X="261.895050"  Z ="-21.236799"/>
+					<scale X="0.161395" Y="0.347700" Z ="0.141811"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.861773" G="0.171546" B="0.310012"/>
+					<translate  X="-125.866226"  Z ="199.986084"/>
+					<scale X="0.336538" Y="0.184873" Z ="0.027543"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.628624" G="0.765397" B="0.287761"/>
+					<translate  X="262.458069"  Z ="-54.447842"/>
+					<scale X="0.133390" Y="0.466905" Z ="0.041365"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.780842" G="0.625423" B="0.247459"/>
+					<translate  X="270.204071"  Z ="4.391409"/>
+					<scale X="0.007723" Y="0.168831" Z ="0.315606"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.679572" G="0.521616" B="0.812188"/>
+					<translate  X="-203.451096"  Z ="128.865402"/>
+					<scale X="0.186547" Y="0.387956" Z ="0.220740"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.680565" G="0.859344" B="0.078876"/>
+					<translate  X="104.451759"  Z ="245.758240"/>
+					<scale X="0.412759" Y="0.305969" Z ="0.164106"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.794867" G="0.544418" B="0.130321"/>
+					<translate  X="26.023697"  Z ="-251.255463"/>
+					<scale X="0.467761" Y="0.232771" Z ="0.223690"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.965700" G="0.666248" B="0.594096"/>
+					<translate  X="105.178215"  Z ="221.587128"/>
+					<scale X="0.210641" Y="0.267964" Z ="0.487213"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.275597" G="0.974779" B="0.896477"/>
+					<translate  X="-94.358604"  Z ="-235.143005"/>
+					<scale X="0.345054" Y="0.158856" Z ="0.033024"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.060964" G="0.916959" B="0.765495"/>
+					<translate  X="-155.368042"  Z ="200.207703"/>
+					<scale X="0.408464" Y="0.480609" Z ="0.338474"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.967670" G="0.809044" B="0.709796"/>
+					<translate  X="-140.887955"  Z ="228.071472"/>
+					<scale X="0.150711" Y="0.107474" Z ="0.151971"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.006474" G="0.242436" B="0.537102"/>
+					<translate  X="53.753845"  Z ="228.791855"/>
+					<scale X="0.146618" Y="0.173288" Z ="0.197321"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.229127" G="0.627251" B="0.777027"/>
+					<translate  X="-256.599609"  Z ="40.145905"/>
+					<scale X="0.156084" Y="0.430878" Z ="0.268252"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.505502" G="0.946144" B="0.576904"/>
+					<translate  X="164.425308"  Z ="-166.719086"/>
+					<scale X="0.131533" Y="0.204521" Z ="0.440408"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.558214" G="0.045869" B="0.594121"/>
+					<translate  X="47.230335"  Z ="-262.744232"/>
+					<scale X="0.488554" Y="0.064690" Z ="0.289860"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.496589" G="0.849338" B="0.410683"/>
+					<translate  X="183.266098"  Z ="-188.307236"/>
+					<scale X="0.354931" Y="0.371770" Z ="0.088823"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.728858" G="0.177309" B="0.961365"/>
+					<translate  X="171.824005"  Z ="-207.656265"/>
+					<scale X="0.266343" Y="0.238573" Z ="0.378128"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.247446" G="0.879612" B="0.607189"/>
+					<translate  X="254.461151"  Z ="-29.887129"/>
+					<scale X="0.139239" Y="0.447709" Z ="0.432157"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.672237" G="0.573594" B="0.027523"/>
+					<translate  X="-210.285889"  Z ="119.662415"/>
+					<scale X="0.305493" Y="0.056107" Z ="0.433061"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.640501" G="0.628527" B="0.530988"/>
+					<translate  X="28.876583"  Z ="251.875839"/>
+					<scale X="0.414117" Y="0.061553" Z ="0.399384"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.535041" G="0.053901" B="0.093486"/>
+					<translate  X="232.804138"  Z ="65.272568"/>
+					<scale X="0.491424" Y="0.146416" Z ="0.013580"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.333422" G="0.453440" B="0.247726"/>
+					<translate  X="129.865372"  Z ="-214.512360"/>
+					<scale X="0.243432" Y="0.231095" Z ="0.308180"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.558114" G="0.390531" B="0.465717"/>
+					<translate  X="240.652557"  Z ="-57.550095"/>
+					<scale X="0.489305" Y="0.337487" Z ="0.299224"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.034689" G="0.077495" B="0.814604"/>
+					<translate  X="-190.248627"  Z ="183.050629"/>
+					<scale X="0.290625" Y="0.414885" Z ="0.355841"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.721692" G="0.012788" B="0.031171"/>
+					<translate  X="86.135681"  Z ="232.982574"/>
+					<scale X="0.297078" Y="0.402843" Z ="0.261259"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.146135" G="0.368558" B="0.347523"/>
+					<translate  X="12.536705"  Z ="-270.034882"/>
+					<scale X="0.127369" Y="0.124749" Z ="0.067056"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.694590" G="0.587546" B="0.313260"/>
+					<translate  X="-155.106308"  Z ="-193.364319"/>
+					<scale X="0.163016" Y="0.120011" Z ="0.394432"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.760808" G="0.090311" B="0.664661"/>
+					<translate  X="93.599754"  Z ="235.093689"/>
+					<scale X="0.127814" Y="0.280321" Z ="0.415179"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.707287" G="0.154326" B="0.422724"/>
+					<translate  X="207.426071"  Z ="120.386780"/>
+					<scale X="0.059871" Y="0.420533" Z ="0.389164"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.826187" G="0.422513" B="0.473255"/>
+					<translate  X="-71.902626"  Z ="255.286621"/>
+					<scale X="0.335931" Y="0.499894" Z ="0.000565"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.137629" G="0.164892" B="0.751728"/>
+					<translate  X="193.007812"  Z ="138.831436"/>
+					<scale X="0.430071" Y="0.087655" Z ="0.443282"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.707534" G="0.607552" B="0.447675"/>
+					<translate  X="137.093475"  Z ="-202.602570"/>
+					<scale X="0.286622" Y="0.290471" Z ="0.204663"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.275681" G="0.532676" B="0.315750"/>
+					<translate  X="93.043785"  Z ="217.542160"/>
+					<scale X="0.454313" Y="0.439136" Z ="0.008457"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.492475" G="0.510526" B="0.405074"/>
+					<translate  X="168.904236"  Z ="-195.924545"/>
+					<scale X="0.479899" Y="0.097388" Z ="0.069676"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.782958" G="0.888420" B="0.391979"/>
+					<translate  X="28.576488"  Z ="264.769806"/>
+					<scale X="0.473321" Y="0.089019" Z ="0.452685"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.793592" G="0.720923" B="0.900705"/>
+					<translate  X="252.154541"  Z ="56.807411"/>
+					<scale X="0.141533" Y="0.157924" Z ="0.263880"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.886003" G="0.638245" B="0.695161"/>
+					<translate  X="208.798508"  Z ="128.525742"/>
+					<scale X="0.261325" Y="0.111852" Z ="0.383627"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.411490" G="0.336961" B="0.564788"/>
+					<translate  X="12.670977"  Z ="246.557022"/>
+					<scale X="0.092204" Y="0.118887" Z ="0.061555"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.354887" G="0.886929" B="0.497449"/>
+					<translate  X="49.834892"  Z ="244.787231"/>
+					<scale X="0.141041" Y="0.476609" Z ="0.118411"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.882239" G="0.816157" B="0.218344"/>
+					<translate  X="-0.047254"  Z ="-252.821548"/>
+					<scale X="0.167018" Y="0.241207" Z ="0.303092"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.071809" G="0.709731" B="0.219004"/>
+					<translate  X="48.201305"  Z ="-245.186172"/>
+					<scale X="0.191172" Y="0.304207" Z ="0.235470"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.540472" G="0.398603" B="0.372433"/>
+					<translate  X="163.913177"  Z ="188.305237"/>
+					<scale X="0.163566" Y="0.279499" Z ="0.002604"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.661840" G="0.924982" B="0.841937"/>
+					<translate  X="-222.166138"  Z ="-99.903526"/>
+					<scale X="0.291584" Y="0.285569" Z ="0.114270"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.826743" G="0.057545" B="0.609369"/>
+					<translate  X="225.495224"  Z ="60.462555"/>
+					<scale X="0.058875" Y="0.295214" Z ="0.320952"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.027129" G="0.642178" B="0.035771"/>
+					<translate  X="-192.782959"  Z ="-139.004059"/>
+					<scale X="0.226820" Y="0.050006" Z ="0.035062"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.885863" G="0.169406" B="0.964004"/>
+					<translate  X="12.036124"  Z ="-257.216614"/>
+					<scale X="0.356522" Y="0.118911" Z ="0.308891"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.635417" G="0.164351" B="0.947800"/>
+					<translate  X="79.751045"  Z ="227.074280"/>
+					<scale X="0.451088" Y="0.338318" Z ="0.454998"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.689990" G="0.341041" B="0.815108"/>
+					<translate  X="-197.480408"  Z ="-180.099442"/>
+					<scale X="0.023906" Y="0.152635" Z ="0.322561"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.946554" G="0.507656" B="0.482632"/>
+					<translate  X="-133.967865"  Z ="198.060867"/>
+					<scale X="0.302757" Y="0.346274" Z ="0.017408"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.577832" G="0.447221" B="0.570615"/>
+					<translate  X="-215.635010"  Z ="-85.849030"/>
+					<scale X="0.274115" Y="0.470294" Z ="0.391461"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.584729" G="0.189955" B="0.245845"/>
+					<translate  X="-223.592850"  Z ="-94.212585"/>
+					<scale X="0.028614" Y="0.300754" Z ="0.403314"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.892071" G="0.379747" B="0.931899"/>
+					<translate  X="-224.784180"  Z ="65.601418"/>
+					<scale X="0.297529" Y="0.039752" Z ="0.442236"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.132102" G="0.754345" B="0.932454"/>
+					<translate  X="266.309021"  Z ="-25.577087"/>
+					<scale X="0.312223" Y="0.135856" Z ="0.465907"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.161841" G="0.014150" B="0.660513"/>
+					<translate  X="-256.630615"  Z ="-51.090874"/>
+					<scale X="0.391047" Y="0.041126" Z ="0.211808"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.686570" G="0.011371" B="0.463387"/>
+					<translate  X="-164.062332"  Z ="-193.991547"/>
+					<scale X="0.466113" Y="0.039458" Z ="0.385349"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.715823" G="0.479446" B="0.314137"/>
+					<translate  X="-171.731125"  Z ="175.160110"/>
+					<scale X="0.389668" Y="0.388428" Z ="0.058179"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.410538" G="0.331498" B="0.570483"/>
+					<translate  X="-19.270971"  Z ="268.414459"/>
+					<scale X="0.198194" Y="0.335493" Z ="0.211691"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.660770" G="0.283220" B="0.939438"/>
+					<translate  X="-20.414225"  Z ="238.498093"/>
+					<scale X="0.324700" Y="0.409917" Z ="0.475147"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.552415" G="0.433929" B="0.581077"/>
+					<translate  X="-171.904953"  Z ="-156.563034"/>
+					<scale X="0.036485" Y="0.059896" Z ="0.166854"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.001750" G="0.841684" B="0.212265"/>
+					<translate  X="68.918480"  Z ="231.017654"/>
+					<scale X="0.132367" Y="0.089256" Z ="0.298502"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.681641" G="0.562057" B="0.605780"/>
+					<translate  X="138.246399"  Z ="-209.924622"/>
+					<scale X="0.016866" Y="0.031953" Z ="0.103145"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.111662" G="0.278970" B="0.861198"/>
+					<translate  X="164.547653"  Z ="-189.215591"/>
+					<scale X="0.312571" Y="0.085871" Z ="0.130399"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.623191" G="0.882073" B="0.295702"/>
+					<translate  X="-241.897278"  Z ="17.089441"/>
+					<scale X="0.030567" Y="0.138146" Z ="0.085332"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.350577" G="0.103375" B="0.496309"/>
+					<translate  X="-215.294891"  Z ="87.524338"/>
+					<scale X="0.370517" Y="0.310791" Z ="0.092592"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.577104" G="0.204468" B="0.170887"/>
+					<translate  X="71.173645"  Z ="223.761932"/>
+					<scale X="0.249785" Y="0.077571" Z ="0.107741"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.747796" G="0.332461" B="0.133519"/>
+					<translate  X="162.090439"  Z ="176.565491"/>
+					<scale X="0.395831" Y="0.474393" Z ="0.239658"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.795893" G="0.250766" B="0.496924"/>
+					<translate  X="-235.047302"  Z ="16.751156"/>
+					<scale X="0.076315" Y="0.337176" Z ="0.361784"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.426676" G="0.352627" B="0.718113"/>
+					<translate  X="-187.833450"  Z ="167.726334"/>
+					<scale X="0.087955" Y="0.427852" Z ="0.090039"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.728946" G="0.918382" B="0.276449"/>
+					<translate  X="128.356674"  Z ="236.233185"/>
+					<scale X="0.395568" Y="0.278208" Z ="0.328864"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.799942" G="0.403261" B="0.515532"/>
+					<translate  X="-161.905441"  Z ="-174.327866"/>
+					<scale X="0.489769" Y="0.475477" Z ="0.134925"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.754688" G="0.096288" B="0.875746"/>
+					<translate  X="-48.553822"  Z ="260.432068"/>
+					<scale X="0.158723" Y="0.045904" Z ="0.442760"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.378385" G="0.284048" B="0.948496"/>
+					<translate  X="-229.650269"  Z ="-137.542145"/>
+					<scale X="0.157978" Y="0.325627" Z ="0.313800"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+				<group>
+					<color R = "0.769376" G="0.537175" B="0.573043"/>
+					<translate  X="-233.744049"  Z ="-29.429073"/>
+					<scale X="0.159812" Y="0.450944" Z ="0.167560"/>
+					<models>
+						<model file ="torus.3d"/>
+					</models>
+				</group>
+
+
+
+
+					
+				
+				<group>
+					<color R="0.96" G="0.87" B="0.70" />
+					<translate time="433" >
+						<point X = " -329.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -164.5 " Y = " 0.0 " Z = " 285.243 " />
+						<point X = " 164.5 " Y = " 0.0 " Z = " 285.243 " />
+						<point X = " 329.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 164.5 " Y = " 0.0 " Z = " -285.243 " />
+						<point X = " -164.5 " Y = " 0.0 " Z = " -285.243 " />
+					</translate>
+
+					<models>
+						<model file="jupiter.3d" />
+					</models>
+					
+					
+					<group>
+						<color R = "0.710286" G="0.622785" B="0.971174"/>
+						<translate  X="37.259117" Y="-12.000000" Z ="0.103982"/>
+						<scale X="2.309076" Y="2.309076" Z ="2.309076"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.943363" G="0.063606" B="0.191615"/>
+						<translate  X="12.226602" Y="10.000000" Z ="-34.438217"/>
+						<scale X="1.528314" Y="1.528314" Z ="1.528314"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.780842" G="0.625423" B="0.247459"/>
+						<translate  X="-20.018566" Y="-14.000000" Z ="32.671589"/>
+						<scale X="2.228177" Y="2.228177" Z ="2.228177"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.079504" G="0.884472" B="0.892071"/>
+						<translate  X="-36.633041" Y="6.000000" Z ="10.691052"/>
+						<scale X="2.100553" Y="2.100553" Z ="2.100553"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.638596" G="0.932225" B="0.078917"/>
+						<translate  X="-20.391048" Y="-7.000000" Z ="-32.210724"/>
+						<scale X="0.519270" Y="0.519270" Z ="0.519270"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.884413" G="0.938997" B="0.869551"/>
+						<translate  X="-36.699532" Y="-10.000000" Z ="8.651918"/>
+						<scale X="3.491680" Y="3.491680" Z ="3.491680"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.999169" G="0.500615" B="0.995315"/>
+						<translate  X="29.389824" Y="-8.000000" Z ="-22.350851"/>
+						<scale X="0.410157" Y="0.410157" Z ="0.410157"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.404386" G="0.581539" B="0.593934"/>
+						<translate  X="-19.742050" Y="9.000000" Z ="-30.283932"/>
+						<scale X="2.192269" Y="2.192269" Z ="2.192269"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.289439" G="0.232329" B="0.297208"/>
+						<translate  X="-32.723236" Y="-20.000000" Z ="19.061815"/>
+						<scale X="0.490997" Y="0.490997" Z ="0.490997"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+					<group>
+						<color R = "0.384912" G="0.977636" B="0.908857"/>
+						<translate  X="34.685802" Y="-20.000000" Z ="13.097526"/>
+						<scale X="0.599265" Y="0.599265" Z ="0.599265"/>
+						<models>
+							<model file ="sphere.3d"/>
+						</models>
+					</group>
+
+
+
+				</group>
+
+				<group>
+					<color R="0.93" G="0.91" B="0.67" />
+					<translate time="538.375" >
+						<point X = " -600.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -300.0 " Y = " 0.0 " Z = " 520.2 " />
+						<point X = " 300.0 " Y = " 0.0 " Z = " 520.2 " />
+						<point X = " 600.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 300.0 " Y = " 0.0 " Z = " -520.2 " />
+						<point X = " -300.0 " Y = " 0.0 " Z = " -520.2 " />
+					</translate>
+					<rotate time="0.13888"  axisY="1" />
+
+					<models>
+						<model file="saturn.3d" />
+					</models>
+				</group>
+					<group>
+						<color R="1" G="0.86" B="0.35" />
+						<translate time="538.375" >
+						<point X = " -600.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -300.0 " Y = " 0.0 " Z = " 520.2 " />
+						<point X = " 300.0 " Y = " 0.0 " Z = " 520.2 " />
+						<point X = " 600.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 300.0 " Y = " 0.0 " Z = " -520.2 " />
+						<point X = " -300.0 " Y = " 0.0 " Z = " -520.2 " />
+					</translate>
+						<rotate angle="-60" axisX="1" />
+						<models>
+							<model file="ring.3d" />
+						</models>
+					</group>
+				
+
+				<group>
+					<color R="0.53" G="0.81" B="0.92" />
+					<translate time="613.28" >
+						<point X = " -770.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -385.0 " Y = " 0.0 " Z = " 667.59 " />
+						<point X = " 385.0 " Y = " 0.0 " Z = " 667.59 " />
+						<point X = " 770.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 385.0 " Y = " 0.0 " Z = " -667.59 " />
+						<point X = " -385.0 " Y = " 0.0 " Z = " -667.59 " />
+					</translate>
+					<rotate time="0.16986"  axisY="1" />
+
+					<models>
+						<model file="uranus.3d" />
+					</models>
+
+				</group>
+
+				<group>
+					<color R="0.0" G="0.5" B="1" />
+					<translate time="669.1667" >
+						<point X = " -910.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " -455.0 " Y = " 0.0 " Z = " 788.97 " />
+						<point X = " 455.0 " Y = " 0.0 " Z = " 788.97 " />
+						<point X = " 910.0 " Y = " 0.0 " Z = " 0.0 " />
+						<point X = " 455.0 " Y = " 0.0 " Z = " -788.97 " />
+						<point X = " -455.0 " Y = " 0.0 " Z = " -788.97 " />
+					</translate>
+					<rotate time="0.6667"  axisY="1" />
+
+					<models>
+						<model file="neptune.3d" />
+					</models>
+				</group>
+
+		</group>
+</scene>

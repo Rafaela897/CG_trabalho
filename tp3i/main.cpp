@@ -12,9 +12,10 @@
 
 #define _PI_ 3.14159
 
-float alfa = 0.0f, beta = 0.0f, radius = 5.0f;
-float camX, camY, camZ;
+float camX = 0, camY, camZ = 5;
+int startX, startY, tracking = 0;
 
+int alfa = 0, beta = 0, radius = 5;
 GLuint vertexCount, vertices;
 
 int timebase = 0, frame = 0;
@@ -25,6 +26,128 @@ void sphericalToCartesian() {
 	camX = radius * cos(beta) * sin(alfa);
 	camY = radius * sin(beta);
 	camZ = radius * cos(beta) * cos(alfa);
+}
+
+
+#define POINT_COUNT 5
+#define TOTAL_POINTS 100
+// Points that make up the loop for catmull-rom interpolation
+float p[POINT_COUNT][4] = {{-1,0,-1,1},{-1,0,1,1},{1,0,1,1},{0,0,0,1},{1,0,-1,1}};
+
+void buildRotMatrix(float *x, float *y, float *z, float *m) {
+
+	m[0] = x[0]; m[1] = x[1]; m[2] = x[2] ; m[3] = 0 ;
+	m[4] = y[0]; m[5] = y[1]; m[6] = y[2] ; m[7] = 0 ;
+	m[8] = z[0]; m[9] = z[1]; m[10] = z[2]; m[11] = 0;
+	m[12] = 0  ; m[13] = 0  ; m[14] = 0   ; m[15] = 1;
+}
+
+void printMatrix(float* m){
+    printf("%f %f %f %f\n%f %f %f %f\n%f %f %f %f\n%f %f %f %f\n",
+            m[0] , m[1] , m[2] , m[3] ,
+            m[4] , m[5] , m[6] , m[7] ,
+            m[8] , m[9] , m[10], m[11],
+            m[12], m[13], m[14], m[15]);
+}
+
+void cross(float *a, float *b, float *res) {
+
+	res[0] = a[1]*b[2] - a[2]*b[1];
+	res[1] = a[2]*b[0] - a[0]*b[2];
+	res[2] = a[0]*b[1] - a[1]*b[0];
+    res[3] = 0;
+}
+
+
+void normalize(float *a) {
+
+	float l = sqrt(a[0]*a[0] + a[1] * a[1] + a[2] * a[2]);
+	a[0] = a[0]/l;
+	a[1] = a[1]/l;
+	a[2] = a[2]/l;
+    a[3] = 1;
+}
+
+
+float length(float *v) {
+
+	float res = sqrt(v[0]*v[0] + v[1]*v[1] + v[2]*v[2]);
+	return res;
+
+}
+
+void multVectorMatrix(float *v, float *m, float *res) {
+
+	for (int j = 0; j < 4; ++j) {
+		res[j] = 0;
+		for (int k = 0; k < 4; ++k) {
+			res[j] += v[k] * m[k * 4 + j];
+		}
+	}
+
+}
+
+void multMatrixMatrix(float* m1, float* m2, float *res){
+    for(int i = 0; i<4; i++){
+        multVectorMatrix(m1 + i*4, m2, res + i*4);
+    }
+}
+
+
+void getCatmullRomPoint(float t, 
+                        float *p0, float *p1, float *p2, float *p3, 
+                        float *pos, float *deriv) {
+
+	// catmull-rom matrix
+	float m[16] =  {	-0.5f,  1.5f, -1.5f,  0.5f,
+						 1.0f, -2.5f,  2.0f, -0.5f,
+						-0.5f,  0.0f,  0.5f,  0.0f,
+						 0.0f,  1.0f,  0.0f,  0.0f };
+			
+	// Compute A = M * P
+	float P[16] = { p0[0], p0[1], p0[2], p0[3],
+                    p1[0], p1[1], p1[2], p1[3], 
+                    p2[0], p2[1], p2[2], p2[3], 
+                    p3[0], p3[1], p3[2], p3[3]};
+    //printf("Pontos:\n");
+    //printMatrix(P);
+
+    float A[16];
+    multMatrixMatrix(m,P,A);
+
+	// Compute pos = T * A
+    
+    float T[4] = {t*t*t, t*t, t, 1};
+    multVectorMatrix(T, A, pos);
+	
+	// compute deriv = T' * A
+
+    float T_[4] = {3*t*t, 2*t, 1, 0};
+    multVectorMatrix(T_, A, deriv);
+
+	// ...
+
+    
+
+
+}
+
+
+// given  global t, returns the point in the curve
+void getGlobalCatmullRomPoint(float gt, float *pos, float *deriv) {
+
+	float t = gt * POINT_COUNT; // this is the real global t
+	int index = floor(t);  // which segment
+	t = t - index; // where within  the segment
+
+	// indices store the points
+	int indices[4]; 
+	indices[0] = (index + POINT_COUNT-1)%POINT_COUNT;	
+	indices[1] = (indices[0]+1)%POINT_COUNT;
+	indices[2] = (indices[1]+1)%POINT_COUNT; 
+	indices[3] = (indices[2]+1)%POINT_COUNT;
+
+	getCatmullRomPoint(t, p[indices[0]], p[indices[1]], p[indices[2]], p[indices[3]], pos, deriv);
 }
 
 
@@ -50,6 +173,21 @@ void changeSize(int w, int h) {
 
 	// return to the model view matrix mode
 	glMatrixMode(GL_MODELVIEW);
+}
+
+void renderCatmullRomCurve() {
+    glBegin(GL_LINE_LOOP);
+    float t;
+    float pos[4];
+    float deriv[4];
+    for(int i= 0; i<TOTAL_POINTS; i++){
+        t = ((float)i)/TOTAL_POINTS;
+        getGlobalCatmullRomPoint(t, pos, deriv);
+        glVertex3f(pos[0],pos[1],pos[2]);
+    }
+
+    glEnd();
+// desenhar a curva usando segmentos de reta - GL_LINE_LOOP
 }
 
 
@@ -581,7 +719,7 @@ void drawSphere() {
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-/*
+
 
 void drawTorus() {
 
@@ -615,14 +753,16 @@ void drawPlane() {
 	glVertexPointer(3,GL_FLOAT,0,0);
 
 	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}*/
+}
 
 void renderScene(void) {
-
+	static float t = 0;
 	float pos[4] = {1.0, 1.0, 1.0, 0.0};
+	float deriv[4];
 	float fps;
 	int time;
 	char s[64];
+	float up[4] = {0,1,0,0};
 
 	glClearColor(0.0f,0.0f,0.0f,0.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -632,6 +772,29 @@ void renderScene(void) {
 	gluLookAt(camX,camY,camZ, 
 		      0.0,0.0,0.0,
 			  0.0f,1.0f,0.0f);
+
+	renderCatmullRomCurve();
+    
+	// apply transformations here
+    getGlobalCatmullRomPoint(t, pos, deriv);
+    normalize(deriv);
+    float Z[4];
+    cross(deriv, up, Z);
+    normalize(Z);
+    cross(Z, deriv, up);
+    normalize(up);
+    
+    /*
+    float m[16] = {deriv[0], up[0], Z[0], pos[0],
+                   deriv[1], up[1], Z[1], pos[1],
+                   deriv[2], up[2], Z[2], pos[2],
+                   0       , 0    , 0   , 1     };
+    */
+    float m[16] = {deriv[0], deriv[1], deriv[2], 0 ,
+                   up[0]   , up[1]   , up[2]   , 0 ,
+                   Z[0]    , Z[1]    , Z[2]    , 0 ,
+                   pos[0]  , pos[1]  , pos[2]  , 1 };
+    glMultMatrixf(m);
 
 	drawSphere();
 	drawTorus();
@@ -648,6 +811,7 @@ void renderScene(void) {
 
 // End of frame
 	glutSwapBuffers();
+	t+=0.001;
 }
 
 
@@ -686,6 +850,70 @@ void processKeys(int key, int xx, int yy)
 
 }
 
+void processMouseButtons(int button, int state, int xx, int yy) 
+{
+	if (state == GLUT_DOWN)  {
+		startX = xx;
+		startY = yy;
+		if (button == GLUT_LEFT_BUTTON)
+			tracking = 1;
+		else if (button == GLUT_RIGHT_BUTTON)
+			tracking = 2;
+		else
+			tracking = 0;
+	}
+	else if (state == GLUT_UP) {
+		if (tracking == 1) {
+			alfa += (xx - startX);
+			beta += (yy - startY);
+		}
+		else if (tracking == 2) {
+			
+			radius -= yy - startY;
+			if (radius < 3)
+				radius = 3.0;
+		}
+		tracking = 0;
+	}
+}
+
+
+void processMouseMotion(int xx, int yy)
+{
+	int deltaX, deltaY;
+	int alphaAux, betaAux;
+	int rAux;
+
+	if (!tracking)
+		return;
+
+	deltaX = xx - startX;
+	deltaY = yy - startY;
+
+	if (tracking == 1) {
+
+		alphaAux = alfa - deltaX;
+		betaAux = beta + deltaY;
+
+		if (betaAux > 85.0)
+			betaAux = 85.0;
+		else if (betaAux < -85.0)
+			betaAux = -85.0;
+
+		rAux = radius;
+	}
+	else if (tracking == 2) {
+
+		alphaAux = alfa;
+		betaAux = beta;
+		rAux = radius - deltaY;
+		if (rAux < 1)
+			rAux = 1;
+	}
+	camX = rAux * sin(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
+	camZ = rAux * cos(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
+	camY = rAux *							     sin(betaAux * 3.14 / 180.0);
+}
 
 
 void initGL() {
@@ -698,7 +926,9 @@ void initGL() {
 	sphericalToCartesian();
 	glEnableClientState(GL_VERTEX_ARRAY);
 
-	prepareSphere(2,20,20);
+	prepareSphere(0.1,20,20);
+
+	//prepareTorus(3,28,100,50);
 }
 
 
@@ -718,6 +948,9 @@ int main(int argc, char **argv) {
 
 // keyboard callback registration
 	glutSpecialFunc(processKeys);
+	glutMouseFunc(processMouseButtons);
+	glutMotionFunc(processMouseMotion);
+
 
 #ifndef __APPLE__	
 // init GLEW
