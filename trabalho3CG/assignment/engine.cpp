@@ -236,9 +236,13 @@ int numFigura=0, globalLevel=0;
 vector<Transformation> vecTransform;
 
 //
-GLuint buffers[1];
+//GLuint buffers;
+GLuint vert, norm, tex;
 int timebase = 0, frame = 0;
 map<int,vector<float>> coords;
+map<int,vector<float>> normals;
+map<int,vector<float>> texCoord;
+int type_cords = 0;
 //
 
 /*
@@ -258,12 +262,40 @@ void readCoord(string fileName,int num)
 	while(getline(myfile,buffer))
 	{
 		float x,y,z;
-		istringstream iss(buffer);
-		iss >> x >> y >> z;
+                switch(type_cords) {
+                    case 0 : /* vertices */
+                    {
+                        istringstream iss(buffer);
+                        iss >> x >> y >> z;
 
-		coords[num].push_back(x);
-		coords[num].push_back(y);
-		coords[num].push_back(z);
+                        coords[num].push_back(x);
+                        coords[num].push_back(y);
+                        coords[num].push_back(z);
+                        type_cords++;
+                        break;
+                    }
+                    case 1 : /* normais */
+                    {
+                        istringstream iss(buffer);
+                        iss >> x >> y >> z;
+
+                        normals[num].push_back(x);
+                        normals[num].push_back(y);
+                        normals[num].push_back(z);
+                        type_cords++;
+                        break;
+                    }
+                    case 2 : /* Textura */
+                    {
+                        istringstream iss(buffer);
+                        iss >> x >> y ;
+
+                        texCoord[num].push_back(x);
+                        texCoord[num].push_back(y);
+                        type_cords
+                        break;
+                    }
+                }
 
 	}
 }
@@ -568,7 +600,7 @@ void renderScene(void) {
 		glutSetWindowTitle(s);
 	}
 
-
+        glClearColor(0.0f,0.0f,0.0f,0.0f);
 	// clear buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -642,16 +674,41 @@ Ver Teste 2 para exemplo concreto.
 		while(drawn<vecTransform[i].drawUntil){
 			// Set buffer active
 			//glBindBuffer(GL_ARRAY_BUFFER,buffers[drawn]); // (vários buffers)
-			glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
+			glBindBuffer(GL_ARRAY_BUFFER,vert);
 			// Fill buffer
 			glBufferData(GL_ARRAY_BUFFER, coords[drawn].size()* sizeof(float) , coords[drawn].data(), GL_STATIC_DRAW); 
+                        
+			glBindBuffer(GL_ARRAY_BUFFER,norm);
+			// Fill buffer
+			glBufferData(GL_ARRAY_BUFFER, normals[drawn].size()* sizeof(float) , normals[drawn].data(), GL_STATIC_DRAW); 
+                        
+			glBindBuffer(GL_ARRAY_BUFFER,tex);
+			// Fill buffer
+			glBufferData(GL_ARRAY_BUFFER, texCoord[drawn].size()* sizeof(float) , texCoord[drawn].data(), GL_STATIC_DRAW); 
 
 			total+=coords[drawn].size(); // total/3 dá o número de vértices das figuras.
     		drawn++;
 		}
 
+                // ILUMINAÇAO
+                /*
+                 *float red[4] = {0.8f, 0.2f, 0.2f, 1.0f};
+                GLfloat amb[4] = {0.2, 0.2, 0.2, 1.0};
+                GLfloat diff[4] = {1.0, 1.0, 1.0, 1.0};
+                GLfloat pos[4] = {1.0, 1.0 ,0.0, 6.0};
+    
+    
+                glMaterialfv(GL_FRONT, GL_DIFFUSE, red);
+                glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
+                glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
+                glLightfv(GL_LIGHT0, GL_POSITION, pos);
+                */
+
+
 		glVertexPointer(3,GL_FLOAT,0,0); // define the semantics
-    	glDrawArrays(GL_TRIANGLE_STRIP, 0, total/3); // Draw VBOs
+                glNormalPointer(GL_FLOAT,0,0);
+                glTexCoordPointer(2,GL_FLOAT,0,0);
+                glDrawArrays(GL_TRIANGLE, 0, total/3); // Draw VBOs
 	}
 
 // Voltar ao n�vel -1, utilizando o "level" da �ltima transforma��o.
@@ -819,7 +876,40 @@ void processMouseMotion(int xx, int yy) {
 	}
 }
 
+int loadTexture(std::string s) {
 
+	unsigned int t,tw,th;
+	unsigned char *texData;
+	unsigned int texID;
+
+	ilInit();
+	ilEnable(IL_ORIGIN_SET);
+	ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
+	ilGenImages(1,&t);
+	ilBindImage(t);
+	ilLoadImage((ILstring)s.c_str());
+	tw = ilGetInteger(IL_IMAGE_WIDTH);
+	th = ilGetInteger(IL_IMAGE_HEIGHT);
+	ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
+	texData = ilGetData();
+
+	glGenTextures(1,&texID);
+	
+	glBindTexture(GL_TEXTURE_2D,texID);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_WRAP_S,		GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_WRAP_T,		GL_REPEAT);
+
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_MAG_FILTER,   	GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, tw, th, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	return texID;
+
+}
 
 
 int main(int argc, char **argv)
@@ -897,8 +987,19 @@ int main(int argc, char **argv)
 
 	
     //Enable Buffer Functionality
-    glGenBuffers(1, buffers);
-	glEnableClientState(GL_VERTEX_ARRAY);
+    glGenBuffers(1, vert);
+    glGenBuffers(1, norm);
+    glGenBuffers(1, tex);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+    // ligar todas as luzes
+    // glEnable(GL_LIGHT0);
+    // ...
+    glEnable(GL_LIGHTING);
+
+    glEnable(GL_TEXTURE_2D);
 
 // enter GLUT's main cycle
 	glutMainLoop();
