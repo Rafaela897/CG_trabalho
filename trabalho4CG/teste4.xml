@@ -1,0 +1,7 @@
+<scene>
+	<group>
+		<models>
+			<model file="sphere1.3d"  texture="earthk1.jpg" />
+		</models>
+	</group>
+</scene>

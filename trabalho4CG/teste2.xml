@@ -1,0 +1,14 @@
+<scene>
+	<group>
+		<models>
+			<model file="torus.3d"  emisR="0.8" emisG="0.8" emisB="0.15" />
+		</models>
+		<group>
+			<translate X= "60"/>
+			<rotate angle="60" axisY= "1"/>
+			<models>
+				<model file="torus.3d"/>
+			</models>
+		</group>
+	</group>
+</scene>
