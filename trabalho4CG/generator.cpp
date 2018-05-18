@@ -286,7 +286,7 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
     myfile.close();
 }
 
-void drawBox(float X, float Y, float Z, int D,string fileName) {
+/*void drawBox(float X, float Y, float Z, int D,string fileName) {
 
 	ofstream myfile;
 	myfile.open(fileName);
@@ -484,7 +484,208 @@ void drawBox(float X, float Y, float Z, int D,string fileName) {
 		}
 	}
 	myfile.close();
+}*/
+
+void drawBox(float X, float Y, float Z, int D,string fileName) {
+
+	ofstream myfile;
+	myfile.open(fileName);
+	if(!myfile.is_open())
+	{
+		cerr << "Couldn't open file.";
+		exit(EXIT_FAILURE);
+	}
+
+	float x = X / 2;
+	float y = Y / 2;
+	float z = Z / 2;
+	if (D < 1)
+		D = 1;
+	float dx = X / D;
+	float dy = Y / D;
+	float dz = Z / D;
+
+	float tx = (1/4) / D;
+	float ty = (1/3) / D;
+	int r = x, t = y, u = z;
+
+	for (int l = 0; l < D; l++) {
+		for (int c = 0; c < D; c++) {
+			// frente
+			myfile << x - (dx*c) <<  " " << y - (dy*l) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*c) <<  " " << 2/3 - (ty*l) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " <<  y - (dy*(l + 1)) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*(c + 1)) <<  " " <<  2/3  - (ty*(l+1)) << endl;
+
+			myfile << x - (dx*c) <<  " " << y - (dy*(l + 1)) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*c) <<  " " << 2/3  - (ty*(l+1)) << endl;
+
+			
+
+			myfile << x - (dx*c) <<  " " << y - (dy*l) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*c) <<  " " <<  2/3 - (ty*l) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << y - (dy*l) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*(c + 1)) <<  " " << 2/3 -(ty*l) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << y - (dy*(l + 1)) << " " << z << endl;
+			myfile << 0 << " " << 0 << " " << 1 << endl;
+			myfile << (3/4) - (tx*(c + 1)) <<  " " << 2/3  - (dy*(l+1)) << " " << z << endl;
+
+			
+
+
+			//lado direito
+			myfile << x <<  " " << y - (dy*l) << " " << z - (dz*(c + 1)) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c+1))<< " " << 2/3- (ty*l) << endl;
+
+			myfile << x <<  " " << y - (dy*(l+1)) << " " << z - (dz*c) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+			myfile << x <<  " " << y - (dy*(l+1)) << " " << z - (dz*(c + 1)) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c+1))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+
+			myfile << x <<  " " << y - (dy*(l + 1)) << " " << z - (dz*c) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+			myfile << x <<  " " << y - (dy*l) << " " << z - (dz*(c + 1)) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c+1))<< " " << 2/3 - (ty*(l)) << endl;
+
+			myfile << x <<  " " << y - (dy*l) << " " << z - (dz*c) << endl;
+			myfile << 1 << " " << 0 << " " << 0 << endl;
+			myfile  << 3/4 + (tx*(c))<< " " << 2/3 - (ty*(l)) << endl;
+
+
+			//lado esquerdo
+			myfile << -x <<  " " << y - (dy*l) << " " << z - (dz*c) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c))<< " " << 2/3 - (ty*(l)) << endl;
+
+			myfile << -x <<  " " << y - (dy*(l + 1)) << " " << z - (dz*(c + 1)) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c+1))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+			myfile << -x <<  " " << y - (dy*(l + 1)) << " " << z - (dz*c) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+			
+
+			myfile << -x <<  " " << y - (dy*(l + 1)) << " " << z - (dz*(c + 1)) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c+1))<< " " << 2/3 - (ty*(l+1)) << endl;
+
+			myfile << -x <<  " " << y - (dy*l) << " " << z - (dz*c) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c))<< " " << 2/3 - (ty*(l)) << endl;
+
+			myfile << -x <<  " " << y - (dy*l) << " " << z - (dz*(c + 1)) << endl;
+			myfile << -1 << " " << 0 << " " << 0 << endl;
+			myfile  << 2/4 - (tx*(c+1))<< " " << 2/3 - (ty*(l)) << endl;
+
+
+			// lado de tras
+			myfile << x - (dx*(c + 1)) <<  " " << y - (dy*l) << " " << -z << endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c + 1)) <<  " " << 2/3  - (ty*l) << endl;
+
+			myfile << x - (dx*c) <<  " " << y - (dy*(l + 1)) << " " << -z << endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c)) <<  " " << 2/3  - (ty*(l+1)) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << y - (dy*(l + 1)) << " " << -z << endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c+1)) <<  " " << 2/3  - (ty*(l+1)) << endl;
+
+
+			myfile << x - (dx*c) <<  " " << y - (dy*(l + 1)) << " " << -z << endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c)) <<  " " << 2/3  - (ty*(l+1)) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << y - (dy*l) << " " << -z << endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c+1)) <<  " " << 2/3  - (ty*(l)) << endl;
+
+			myfile << x - (dx*c) <<  " " << y - (dy*l) << " " << -z<< endl;
+			myfile << 0 << " " << 0 << " " << -1 << endl;
+			myfile << (1/4)-(tx*(c)) <<  " " << 2/3  - (ty*(l) )<< endl;
+
+			
+
+			//topo
+			myfile << x - (dx*c) <<  " " << y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*c) <<  " " << 2/3  + (ty*(l + 1)) << endl;
+			
+			myfile << x - (dx*(c + 1)) <<  " " << y << " " <<  z - (dz*l) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 2/3  + (ty*(l)) << endl;
+
+			myfile << x - (dx*c) <<  " " << y << " " << z - (dz*l) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c)) <<  " " << 2/3  + (ty*(l)) << endl;
+
+
+			
+
+			myfile << x - (dx*(c + 1)) <<  " " << y << " " << z - (dz*l) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 2/3  + (ty*(l)) << endl;
+
+			myfile << x - (dx*c) <<  " " << y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c)) <<  " " << 2/3  + (ty*(l+1)) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << 1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 2/3  + (ty*(l+1)) << endl;
+
+
+			//base
+			myfile << x - (dx*c) <<  " " << -y << " " << z - (dz*l) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c)) <<  " " << 1/3  - (ty*(l)) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << -y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 1/3  - (ty*(l+1)) << endl;
+
+			myfile << x - (dx*c) <<  " " << -y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c)) <<  " " << 1/3  - (ty*(l+1)) << endl;
+
+
+			
+
+			myfile << x - (dx*(c + 1)) <<  " " << -y << " " << z - (dz*(l + 1)) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 1/3  - (ty*(l+1)) << endl;
+
+			myfile << x - (dx*c) <<  " " << -y << " " << z - (dz*l) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c)) <<  " " << 1/3  - (ty*(l)) << endl;
+
+			myfile << x - (dx*(c + 1)) <<  " " << -y << " " << z - (dz*l) << endl;
+			myfile << 0 << " " << -1 << " " << 0 << endl;
+			myfile << (3/4) - (tx*(c+1)) <<  " " << 1/3  - (ty*(l)) << endl;
+
+		}
+	}
+	myfile.close();
 }
+
 
 void drawCone(float radius,float h,int slices, int stacks, string fileName)
 {
@@ -502,6 +703,12 @@ void drawCone(float radius,float h,int slices, int stacks, string fileName)
 	float texsl=1.0f/slices;
 
     for(int x = 0 ; x< slices ; x++ ){
+
+    	myfile << 0 << " " << 0 << " " << 0 << endl;
+		myfile <<  0  << " " << -1 << " " << 0 << endl;
+		myfile <<  x*texsl  << " " <<1 << endl;
+
+
 		for (int j = stacks-1; j >= 0; j--)
 		{
 			myfile << ((radius*j)/stacks)*sin(x*angulo) << " " << h - (h/stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo) << endl;
@@ -536,6 +743,11 @@ void drawCone(float radius,float h,int slices, int stacks, string fileName)
 		myfile << radius*sin(x*angulo) << " " << "0.0" << " " << radius*cos(x*angulo) << endl;
 		myfile <<  0  << " " << -1 << " " << 0 << endl;
 		myfile <<  x*texsl  << " " << 1-texst << endl;
+		
+
+		myfile << radius*sin(x*angulo + angulo) << " " << "0.0" << " " << radius*cos(x*angulo + angulo) << endl;
+		myfile <<  0  << " " << -1 << " " << 0 << endl;
+		myfile <<  x*texsl  << " " << 1-texst << endl;
 
 
 		myfile << "0.0" << " " << "0.0" << " " << "0.0" << endl;
@@ -543,10 +755,6 @@ void drawCone(float radius,float h,int slices, int stacks, string fileName)
 		myfile <<  x*texsl  << " " << 1-texst << endl;
 
 
-
-		myfile << radius*sin(x*angulo + angulo) << " " << "0.0" << " " << radius*cos(x*angulo + angulo) << endl;
-		myfile <<  0  << " " << -1 << " " << 0 << endl;
-		myfile <<  x*texsl  << " " << 1-texst << endl;
 
 
     }

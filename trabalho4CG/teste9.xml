@@ -1,0 +1,12 @@
+<scene>
+	<lights>
+		<light type="SPOT" angle="45" X="-20" Y="20" Z="20" />
+	</lights>
+	<group>
+
+		<translate X="5" Y="0" Z="2" />
+		<models>
+			<model file="sphere1.3d" />
+		</models>
+	</group>
+</scene>

@@ -202,11 +202,17 @@ void drawCone(float radius,float h,int slices, int stacks, string fileName)
 	int z = 0;
 
     for(int x = 0 ; x< slices ; x++ ){
-		for (int j = stacks; j >= 0; j--)
+		for (int j = stacks-1; j >= 0; j--)
 		{
 			myfile << ((radius*j)/stacks)*sin(x*angulo) << " " << h - (h/stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo) << endl;
+			myfile << ((radius*(j+1))/stacks)*sin(x*angulo) << " " << h - (h/stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo) << endl;
 			myfile << ((radius*j) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo + angulo) << endl;
-			myfile << "0.0" << " " << h << " " << "0.0" << endl;
+
+			myfile << ((radius*j) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo + angulo) << endl;
+			myfile << ((radius*(j+1))/stacks)*sin(x*angulo) << " " << h - (h/stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo) << endl;
+			myfile << ((radius*(j+1)) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo + angulo) << endl;
+
+			
 		}
 		myfile << radius*sin(x*angulo) << " " << "0.0" << " " << radius*cos(x*angulo) << endl;
 		myfile << "0.0" << " " << "0.0" << " " << "0.0" << endl;

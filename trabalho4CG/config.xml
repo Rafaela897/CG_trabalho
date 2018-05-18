@@ -3,7 +3,8 @@
 			<scale X="0.3" Y="0.3" Z="0.3"/>
 			<color R="1.0" G="0.84" B="0.0" />
 			<models>
-				<model file="sun.3d" emisR="0.8" emisG="0.8" emisB="0.15"/>
+				<model file="sun.3d" texture="sun.jpg" />
+
 			</models>
 
 			<group>
@@ -21,7 +22,7 @@
 				<rotate time="19.387"  axisY="1" />
 
 				<models>
-					<model file="mercury.3d" />
+					<model file="mercury.3d" texture=" mercury.jpg"/>
 				</models>
 			</group>
 
@@ -37,7 +38,7 @@
 				</translate>
 				<rotate time="74.9"  axisY="1" />
 				<models>
-					<model file="venus.3d" />
+					<model file="venus.3d" texture=" venus.jpg" />
 				</models>
 				</group>
 
@@ -53,7 +54,7 @@
 					</translate>
 					<rotate time="0.3333"  axisY="1" />
 					<models>
-						<model file="earth.3d" />
+						<model file="earth.3d" texture=" earth.jpg"/>
 					</models>
 				</group>
 
@@ -93,7 +94,7 @@
 					</translate>
 					<rotate time="0.3333"  axisY="1" />
 					<models>
-						<model file="mars.3d" />
+						<model file="mars.3d" texture=" mars.jpg" />
 					</models>
 				</group>
 				<group>
@@ -939,7 +940,7 @@
 					</translate>
 
 					<models>
-						<model file="jupiter.3d" />
+						<model file="jupiter.3d" texture=" jupiter.jpg" />
 					</models>
 					
 					
@@ -1041,7 +1042,7 @@
 					<rotate time="0.13888"  axisY="1" />
 
 					<models>
-						<model file="saturn.3d" />
+						<model file="saturn.3d" texture=" saturn.jpg" />
 					</models>
 				</group>
 					<group>
@@ -1054,9 +1055,10 @@
 						<point X = " 300.0 " Y = " 0.0 " Z = " -520.2 " />
 						<point X = " -300.0 " Y = " 0.0 " Z = " -520.2 " />
 					</translate>
+						<scale X="1.0" Y="0.2" Z="1.0" />
 						<rotate angle="-60" axisX="1" />
 						<models>
-							<model file="ring.3d" />
+							<model file="ring.3d" texture=" saturnring.png" />
 						</models>
 					</group>
 				
@@ -1074,7 +1076,7 @@
 					<rotate time="0.16986"  axisY="1" />
 
 					<models>
-						<model file="uranus.3d" />
+						<model file="uranus.3d" texture=" uranus.jpg" />
 					</models>
 
 				</group>
@@ -1092,7 +1094,7 @@
 					<rotate time="0.6667"  axisY="1" />
 
 					<models>
-						<model file="neptune.3d" />
+						<model file="neptune.3d" texture=" neptune.jpg" />
 					</models>
 				</group>
 

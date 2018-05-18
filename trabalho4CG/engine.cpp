@@ -68,6 +68,31 @@ void transformInit(pTransformation t)
 	t->file="";
 }
 
+/*
+* type:
+* 	1: Point;
+*	2: Directional;
+*	3: Spot;
+*/
+typedef struct sLight
+{
+	int type;
+	float xx;
+	float yy;
+	float zz;
+	float angle; // Valores entre 0 e 90.
+}Light,*pLight;
+
+
+
+void lightInit(pLight l)
+{
+	l->type=0;
+	l->xx = 0.0f;
+	l->yy = 0.0f;
+	l->zz = 0.0f;	
+	l->angle = -1;
+} 
 
 /* 
 CATMULL
@@ -236,7 +261,7 @@ CATMULL
 * globalLevel: var auxiliar para preencher os 'level' na estrutura;
 * map<numFigura, vector<tuple<coordX, coordY, coordZ> >>
 */
-
+GLenum currentLight;
 
 
 int loadTexture(std::string s) {
@@ -285,6 +310,7 @@ int loadTexture(std::string s) {
 
 int numFigura=0, globalLevel=0;
 vector<Transformation> vecTransform;
+vector<Light> vecLight;
 
 //
 //GLuint buffers;
@@ -673,9 +699,79 @@ void parserXML(XMLElement* pGroup,int numF,int curLevel) {
 	}
 }
 
+void parserLights(XMLElement* pLight){
+	XMLElement *aux;
+	const char *attributeText = nullptr;
+	float lx=0,ly=0,lz=0,ang=0;
 
-int old_t;
+	aux = pLight->FirstChildElement("light");
+	
 
+	while(aux!=nullptr){
+		Light light;
+		lightInit(&light);
+		
+		
+		aux->QueryStringAttribute("type", &attributeText);
+		aux->QueryFloatAttribute("X", &lx);
+		aux->QueryFloatAttribute("Y", &ly);
+		aux->QueryFloatAttribute("Z", &lz);
+		aux->QueryFloatAttribute("angle", &ang);
+
+
+		if( (strcmp(attributeText,"POINT"))==0)
+			light.type=1;
+		else if( (strcmp(attributeText,"DIRECTIONAL"))==0)
+			light.type=2;
+		else if( (strcmp(attributeText,"SPOT"))==0)
+			light.type=3;
+
+		light.xx=lx;
+		light.yy=ly;
+		light.zz=lz;
+		if(ang>=0 && ang<=90)
+			light.angle=ang;
+
+		vecLight.push_back(light);
+
+		aux = aux->NextSiblingElement();
+	}
+}
+
+
+void putLight(pLight l,int i){
+	GLfloat pos[4];
+	pos[0]=l->xx;
+	pos[1]=l->yy;
+	pos[2]=l->zz;
+	int nluz=0;
+	nluz += i;
+	
+
+	glEnable(GL_LIGHT0 + nluz);
+
+	if(l->type==1){
+
+		pos[3]=1;
+		glLightfv(GL_LIGHT0 + nluz, GL_POSITION, pos);
+
+	}
+	else if(l->type==2){
+		pos[3]=0;
+		glLightfv(GL_LIGHT0 + nluz, GL_POSITION, pos);
+	}	
+	
+	else if(l->type==3){
+		GLfloat spotDir[3];
+		spotDir[0]=l->xx;
+		spotDir[1]=l->yy;
+		spotDir[2]=l->zz;
+		if (l->angle!=-1)
+			glLightf(GL_LIGHT0 + nluz, GL_SPOT_CUTOFF, l->angle);
+
+		glLightfv(GL_LIGHT0 + nluz, GL_SPOT_DIRECTION, spotDir);
+	}
+}
 
 void execTransform(pTransformation t, bool flag){
 	if(flag){
@@ -720,7 +816,6 @@ void execTransform(pTransformation t, bool flag){
 				glRotatef(((float)intv/(float)tm)*360.0 , t->xx, t->yy, t->zz);
 
 			}
-
 //			
 			break;
 		}
@@ -736,52 +831,40 @@ void execTransform(pTransformation t, bool flag){
 			break;
 		}
 		case 5:
-		{
-			
+		{			
             GLfloat diff[4] = {t->xx, t->yy, t->zz, 1.0};
-
-
-            glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
-
-    
+            glLightfv(currentLight, GL_DIFFUSE, diff);
+            currentLight+=1;
 			break;
 		}
 		case 6:
-		{
-			
+		{			
             GLfloat spec[4] = {t->xx, t->yy, t->zz, 1.0};
-
 			glMaterialfv(GL_FRONT, GL_SPECULAR, spec);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, spec);
-            
-    
+            glLightfv(currentLight, GL_SPECULAR, spec);
+            currentLight+=1;    
 			break;
 		}
 		case 7:
 		{
 			
             GLfloat emi[4] = {t->xx, t->yy, t->zz, 1.0};
-
-
             glMaterialfv(GL_FRONT, GL_EMISSION, emi);
-            glLightfv(GL_LIGHT0, GL_EMISSION,emi);
-    
+            glLightfv(currentLight, GL_EMISSION,emi);
+            currentLight+=1;
 			break;
 		}
 		case 8:
 		{
-			
             GLfloat amb[4] = {t->xx, t->yy, t->zz, 1.0};
-
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
-    
+            glLightfv(currentLight, GL_AMBIENT, amb);
+            currentLight+=1;
 			break;
 		}
 		case 9:
 		{
 			string f= t->file;
-           texIDimage = loadTexture(t->file);
+            texIDimage = loadTexture(t->file);
 			break;
 		}
 		default: // caso type=0 (i.e. bloco sem transforma��es )
@@ -792,9 +875,9 @@ void execTransform(pTransformation t, bool flag){
 	}
 }
 
+
 // Vars para a câmara
 //camType: 0-> fps, 1-> mouse
-
 float alpha = 0.0f, beta = 0.0f, r = 5.0f, radius=100.0f;
 int alphaAux, betaAux;
 float camX, camY, camZ;
@@ -860,7 +943,7 @@ void renderScene(void) {
 		glutSetWindowTitle(s);
 	}
 
-        glClearColor(0.0f,0.0f,0.0f,0.0f);
+    glClearColor(0.0f,0.0f,0.0f,0.0f);
 	// clear buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -868,6 +951,7 @@ void renderScene(void) {
 	glLoadIdentity();
 
 // C�mara est� num ponto  não fixo.
+
 	gluLookAt(px,py,pz,
 		px+camX, py+camY,pz+camZ,
 		0.0f, 1.0f, 0.0f);
@@ -885,6 +969,13 @@ void renderScene(void) {
 	int localLevel=-1,i=0,drawn=0;
 	bool lastCanDraw=true;
 	map<int, vector<float>>::iterator it;
+
+	for(i=0;i<vecLight.size();i++){
+		putLight(&vecLight[i],i);
+	}
+
+	currentLight=GL_LIGHT0+i;
+	
 
 	for(i=0;i<vecTransform.size();i++){
 
@@ -960,12 +1051,7 @@ Ver Teste 2 para exemplo concreto.
         glBindBuffer(GL_ARRAY_BUFFER,tex);
         glTexCoordPointer(2,GL_FLOAT,0,0);
         glDrawArrays(GL_TRIANGLES, 0, total/2); // Draw VBOs
-        //glEnable(GL_LIGHT0);
 
-        GLfloat pos[4] = {0.0, 0.0 ,0.0, 1.0};
-
-       
-       //glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
 	}
 
@@ -1134,28 +1220,6 @@ void processMouseMotion(int xx, int yy) {
 	}
 }
 
-void initGL() {
-
-// alguns settings para OpenGL
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
-
-	spherical2Cartesian();
-	//glEnableClientState(GL_VERTEX_ARRAY);
-	//glEnableClientState(GL_NORMAL_ARRAY);
-	//glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-
-	//glClearColor(0, 0, 0, 0);
-
-	glDisable(GL_LIGHTING);
-	glDisable(GL_LIGHT0);
-
-
-	//glEnable(GL_TEXTURE_2D);
-	
-}
-
-
 
 int main(int argc, char **argv)
 {
@@ -1186,8 +1250,22 @@ int main(int argc, char **argv)
 		parserXML(pGroup,numFigura,globalLevel);
 		pGroup = pGroup->NextSiblingElement();
 	}
+
+
+	XMLElement* pLights = pRoot->FirstChildElement("lights");
+	
+	while (pLights != nullptr)
+	{
+		parserLights(pLights);
+		pLights = pLights->NextSiblingElement();
+	}
+
+
+
 //	cout << "XML OK" << endl;
 // ----------------
+
+	cout << "NUM FIGURA: " << numFigura << endl;
 
 	cout << " Struct: " << endl;
 	for(int i=0;i<vecTransform.size();i++){
@@ -1198,18 +1276,22 @@ int main(int argc, char **argv)
 		cout << "z: " << vecTransform[i].zz << endl;
 		cout << "type: " << vecTransform[i].type << endl;
 		cout << "level: " << vecTransform[i].level << endl;
+		cout << "Texture : " << vecTransform[i].file << endl;
 		cout << "canDraw: " << vecTransform[i].canDraw << endl;
-		
 		for(int j=0;j< vecTransform[i].points.size();j++)
-
 			cout << "elem " << j <<" : " <<  vecTransform[i].points[j] << endl;
 		cout << "time: " << vecTransform[i].time <<  endl;
 	}
-	/*for (auto elem: normals){
-		for(int j=0; j < elem.second.size(); j++)
-			cout << elem.second[j] << endl;
-	}*/
 
+	cout << endl;
+	cout << "Struct Lights: " << endl;
+	for(int i=0;i<vecLight.size();i++){
+		cout << endl;
+		cout << "x: " << vecLight[i].xx << endl;
+		cout << "y: " << vecLight[i].yy << endl;
+		cout << "z: " << vecLight[i].zz << endl;
+		cout << "Type: " << vecLight[i].type << endl;
+	}
 	// init GLUT and the window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
@@ -1244,8 +1326,8 @@ int main(int argc, char **argv)
     glEnableClientState(GL_VERTEX_ARRAY);
    	glEnableClientState(GL_NORMAL_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glClearColor(0, 0, 0, 0);
 	//glEnable(GL_LIGHTING);
-	//glEnable(GL_LIGHT0);
 	glEnable(GL_TEXTURE_2D);
 
     //initGL();

@@ -323,7 +323,7 @@ void renderScene(void) {
 	glLoadIdentity();
 
 // C�mara est� num ponto fixo.
-	gluLookAt(300,200,-400,
+	gluLookAt(300,-200,-400,
 		0.0, 0.0,0.0,
 		0.0f, 1.0f, 0.0f);
 

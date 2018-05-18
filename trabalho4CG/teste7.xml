@@ -1,0 +1,8 @@
+<scene>
+	<group>
+		<scale X="1.0" Y="0.1" Z="1.0" />		
+		<models>
+			<model file="torus1.3d" texture="saturnring.png" />
+		</models>
+	</group>
+</scene>
