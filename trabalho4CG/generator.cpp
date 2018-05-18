@@ -197,6 +197,7 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
     const double angulo2 = (2 * M_PI)/slices;
 
     float s , t , x , y , z, x2 , y2 , z2 , xk, yk, zk, x2k, y2k, z2k;
+    float tx ,ty , tx2 , ty2 ,txk, tyk, tx2k, ty2k;
 
     for (int i = 0; i < rings; i++) {
         for (int j = 0; j <= slices; j++) {
@@ -208,6 +209,9 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
            x = (raioE + raioI * cos(s * angulo1)) * cos(t * angulo2);
            y = (raioE + raioI * cos(s * angulo1)) * sin(t * angulo2);
            z = raioI * sin(s * angulo1);
+           
+           tx = (j)/(float)(slices + 1);
+           ty = (i)/(float)rings;
 
             // PRIMEIROK
            s = (i + 1) % rings ;
@@ -218,6 +222,10 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
            zk = raioI * sin(s * angulo1);
 
 
+           txk = (j)/(float)(slices + 1);
+           tyk = (i + 1)/(float)rings;
+
+
                 // SEGUNDO
            s = i % rings ;
            t = (j + 1) % (slices + 1);
@@ -225,6 +233,10 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
            x2 = (raioE + raioI * cos(s * angulo1)) * cos(t * angulo2);
            y2 = (raioE + raioI * cos(s * angulo1)) * sin(t * angulo2);
            z2 = raioI * sin(s * angulo1);
+           
+
+           tx2 = (j + 1)/(float)(slices+1);
+           ty2 = (i)/(float)rings;
 
                // SEGUNDOk
            s = (i + 1) % rings ;
@@ -235,27 +247,37 @@ void drawTorus(float raioI , float raioE , int rings, int slices, string fileNam
            z2k = raioI * sin(s * angulo1);
 
 
+           tx2k = (j + 1)/(float)(slices + 1);
+           ty2k = (i + 1)/(float)rings;
+
+
 
             // ----DESENHAR-----
 			myfile << x <<  " " << y << " " << z << endl;
 			myfile << cos(j % (slices + 1) * angulo2)*cos(i % rings * angulo1) <<  " " <<  sin(j % (slices + 1) * angulo2)* cos(i % rings * angulo1) << " " << sin(i % rings * angulo1) << endl;
+			myfile << tx <<  " " << ty << endl;
 
 
 			myfile << x2 <<  " " << y2 << " " << z2 << endl;
 			myfile << cos((j + 1) % (slices + 1) * angulo2)*cos(i % rings * angulo1) <<  " " <<  sin((j + 1) % (slices + 1) * angulo2)* cos(i % rings * angulo1) << " " << sin(i % rings * angulo1) << endl;
+			myfile << tx2 <<  " " << tx2 << endl;
 
 			myfile << xk <<  " " << yk << " " << zk << endl;
 			myfile << cos(j % (slices + 1) * angulo2)*cos((i + 1) % rings  * angulo1) <<  " " << sin(j % (slices + 1) * angulo2)* cos((i + 1) % rings  * angulo1) << " " << sin((i + 1) % rings  * angulo1) << endl;
+			myfile << txk <<  " " << tyk << endl;
 
 
 			myfile << xk <<  " " << yk << " " << zk << endl;
 			myfile << cos(j % (slices + 1) * angulo2)*cos((i + 1) % rings  * angulo1) <<  " " <<  sin(j % (slices + 1) * angulo2)* cos((i + 1) % rings  * angulo1) << " " << sin((i + 1) % rings  * angulo1) << endl;
+			myfile << txk <<  " " << tyk << endl;
 
 			myfile << x2 <<  " " << y2 << " " << z2 << endl;
 			myfile << cos((j + 1) % (slices + 1) * angulo2)*cos(i % rings * angulo1) <<  " " <<  sin((j + 1) % (slices + 1) * angulo2)* cos(i % rings * angulo1) << " " << sin(i % rings * angulo1) << endl;
+			myfile << tx2 <<  " " << ty2 << endl;
 
 			myfile << x2k <<  " " << y2k << " " << z2k << endl;
 			myfile << cos((j+1) % (slices + 1)* angulo2)*cos((i + 1) % rings * angulo1) <<  " " <<  sin((j+1) % (slices + 1) * angulo2)* cos((i + 1) % rings * angulo1) << " " << sin((i + 1) % rings * angulo1) << endl;
+			myfile << tx2k <<  " " << ty2k << endl;
 
 
 
