@@ -31,6 +31,19 @@ void drawSphere(float radius,int slices,int stack, string fileName)
 
 	for (int i = 0; i<  slices; i++){
 
+/*
+		//primeiro ponto
+		myfile << 0 <<  " " << radius << " " << 0 << endl;
+			
+		myfile << 0 << " " << 1 <<" " << 0<< endl;
+			
+		myfile << (i)*texsl << " " << 1.0 << endl;
+		*/	 
+
+
+
+
+
 		//ponto
 			myfile << radius*cos((stack / 2 - (j+1))* b)*sin((i+1)*a) <<  " " << radius*sin((stack / 2 - (j+1))* b) << " " << radius*cos((stack / 2 - (j+1))* b)*cos((i+1)*a) << endl;
 			
@@ -55,7 +68,7 @@ void drawSphere(float radius,int slices,int stack, string fileName)
 			
 
 
-		for(int j=0; j <= stack-1; j++ ){
+		for(int j=1; j <= stack-1; j++ ){
 
 
 			//ponto
@@ -152,6 +165,17 @@ void drawSphere(float radius,int slices,int stack, string fileName)
 			//coordenadas de textura
 			myfile << (i)*texsl <<" " <<0  << endl;
 
+		/*	//ponto
+			myfile << 0 <<  " " << -radius << " " << 0 << endl;
+			
+			//normal
+			myfile << 0 <<" " << -1  << 0 << endl;
+
+			//coordenadas de textura
+
+			myfile << (i)*texsl <<" " <<0  << endl;
+
+		*/
 
 
 
@@ -452,17 +476,57 @@ void drawCone(float radius,float h,int slices, int stacks, string fileName)
 
 	float angulo = (2*(M_PI))/ slices;
 	int z = 0;
+	float texst=1.0f/stacks;
+	float texsl=1.0f/slices;
 
     for(int x = 0 ; x< slices ; x++ ){
-		for (int j = stacks; j >= 0; j--)
+		for (int j = stacks-1; j >= 0; j--)
 		{
 			myfile << ((radius*j)/stacks)*sin(x*angulo) << " " << h - (h/stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo) << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-j*texst << endl;
+
+			
+			myfile << ((radius*(j+1))/stacks)*sin(x*angulo) << " " << h - (h/stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo) << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-(j+1)*texst << endl;
+			
+
 			myfile << ((radius*j) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo + angulo) << endl;
-			myfile << "0.0" << " " << h << " " << "0.0" << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-j*texst << endl;
+
+			myfile << ((radius*j) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*j << " " << ((radius*j) / stacks)*cos(x*angulo + angulo) << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-j*texst << endl;
+			
+
+			myfile << ((radius*(j+1))/stacks)*sin(x*angulo) << " " << h - (h/stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo) << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-(j+1)*texst << endl;
+			
+			myfile << ((radius*(j+1)) / stacks)*sin(x*angulo + angulo) << " " << h - (h/ stacks)*(j+1) << " " << ((radius*(j+1)) / stacks)*cos(x*angulo + angulo) << endl;
+			myfile <<  0  << " " << -1 << " " << 0 << endl;
+			myfile <<  x*texsl  << " " << 1-(j+1)*texst << endl;
+	
 		}
+
 		myfile << radius*sin(x*angulo) << " " << "0.0" << " " << radius*cos(x*angulo) << endl;
+		myfile <<  0  << " " << -1 << " " << 0 << endl;
+		myfile <<  x*texsl  << " " << 1-texst << endl;
+
+
 		myfile << "0.0" << " " << "0.0" << " " << "0.0" << endl;
+		myfile <<  0  << " " << -1 << " " << 0 << endl;
+		myfile <<  x*texsl  << " " << 1-texst << endl;
+
+
+
 		myfile << radius*sin(x*angulo + angulo) << " " << "0.0" << " " << radius*cos(x*angulo + angulo) << endl;
+		myfile <<  0  << " " << -1 << " " << 0 << endl;
+		myfile <<  x*texsl  << " " << 1-texst << endl;
+
+
     }
 	myfile.close();
 }
