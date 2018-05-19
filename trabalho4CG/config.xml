@@ -1,9 +1,12 @@
 <scene>
+	<lights>
+		<light type="DIRECTIONAL"  X="1" Y="1" Z="1" />
+	</lights>
 	<group>
 			<scale X="0.3" Y="0.3" Z="0.3"/>
 			<color R="1.0" G="0.84" B="0.0" />
 			<models>
-				<model file="sun.3d" texture="sun.jpg" />
+				<model file="sun.3d"  texture= "sun.jpg"/>
 
 			</models>
 

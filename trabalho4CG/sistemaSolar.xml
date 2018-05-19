@@ -1,0 +1,54 @@
+<scene>
+	<lights>
+		<light type="DIRECTIONAL"  X="1" Y="1" Z="1" />
+	</lights>
+	<group>
+		
+		<models>
+			<model file="sun.3d"  texture= "sun.jpg"/>
+		</models>
+		
+		<group>
+			<color R="0" G="0" B="0" />
+			<rotate time="19.387"  axisY="1" />
+			<models>
+				<model file="mercury.3d" texture=" mercury.jpg"/>
+			</models>
+		</group>
+		
+		<group>
+			<color R="0.96" G="0.64" B="0.38" />
+			<translate time="74.9000" >
+				<point X = " -142.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " -71.0 " Y = " 0.0 " Z = " 123.114 " />
+				<point X = " 71.0 " Y = " 0.0 " Z = " 123.114 " />
+				<point X = " 142.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " 71.0 " Y = " 0.0 " Z = " -123.114 " />
+				<point X = " -71.0 " Y = " 0.0 " Z = " -123.114 " />
+			</translate>
+			<rotate time="74.9"  axisY="1" />
+			<models>
+				<model file="venus.3d" texture=" venus.jpg" />
+			</models>
+		</group>
+
+		<group>
+			<color R="0.12" G="0.56" B="1" />
+			<translate time="121.6667" >
+				<point X = " -170.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " -85.0 " Y = " 0.0 " Z = " 147.39 " />
+				<point X = " 85.0 " Y = " 0.0 " Z = " 147.39 " />
+				<point X = " 170.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " 85.0 " Y = " 0.0 " Z = " -147.39 " />
+				<point X = " -85.0 " Y = " 0.0 " Z = " -147.39 " />
+			</translate>
+			<rotate time="0.3333"  axisY="1" />
+			<models>
+				<model file="earth.3d" texture=" earth.jpg"/>
+			</models>
+		</group>
+
+
+
+	</group>
+</scene>

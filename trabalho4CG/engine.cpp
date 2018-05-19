@@ -851,6 +851,7 @@ void execTransform(pTransformation t, bool flag){
             GLfloat emi[4] = {t->xx, t->yy, t->zz, 1.0};
             glMaterialfv(GL_FRONT, GL_EMISSION, emi);
             glLightfv(currentLight, GL_EMISSION,emi);
+            glEnable(currentLight);
             currentLight+=1;
 			break;
 		}
@@ -1327,7 +1328,7 @@ int main(int argc, char **argv)
    	glEnableClientState(GL_NORMAL_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     glClearColor(0, 0, 0, 0);
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
 
     //initGL();

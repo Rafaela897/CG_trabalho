@@ -1,12 +1,52 @@
 <scene>
 	<lights>
-		<light type="SPOT" angle="45" X="-20" Y="20" Z="20" />
+		<light type="DIRECTIONAL"  X="-20" Y="20" Z="20" />
 	</lights>
 	<group>
-
-		<translate X="5" Y="0" Z="2" />
+			
 		<models>
-			<model file="sphere1.3d" />
+			<model file="sphere1.3d"  texture= "sun.jpg"/>
 		</models>
+		<group>
+			<color R="0.91" G="0.59" B="0.48" />
+			<translate  Z="109" />
+			<rotate time="19.387"  axisY="1" />
+			<models>
+				<model file="sphere1.3d" texture=" mercury.jpg"/>
+			</models>
+		</group>
+
+		<group>
+			<color R="0.96" G="0.64" B="0.38" />
+			<translate  Z="142" />
+			<rotate time="74.9"  axisY="1" />
+			<models>
+				<model file="sphere1.3d" texture=" venus.jpg" />
+			</models>
+		</group>
+
+
+
+		<group>
+			<rotate time="19.387"  axisY="1" />
+			<translate  Z="170" />
+			<rotate time="19.387"  axisY="1" />
+			<models>
+				<model file="sphere1.3d" texture= "earth.jpg" />
+			</models>
+		</group>
+
+		<group>
+
+			<translate  Z="170" />
+			<color R="0.75" G="0.75" B="0.75" />
+			<translate  Z="8" />
+			<rotate time="19.387"  axisY="1" />
+						
+			<models>
+				<model file="lua.3d" />
+			</models>
+		</group>
+
 	</group>
 </scene>
