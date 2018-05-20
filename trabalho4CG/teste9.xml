@@ -1,52 +1,53 @@
 <scene>
 	<lights>
-		<light type="DIRECTIONAL"  X="-20" Y="20" Z="20" />
+			<light type="POINT"  X="0" Y="0" Z="0" />
 	</lights>
+
 	<group>
-			
 		<models>
-			<model file="sphere1.3d"  texture= "sun.jpg"/>
+			<scale X="0.3" Y="0.3" Z="0.3"/>
+			<model file="sun.3d"  texture= "sun.jpg"/>
 		</models>
+
 		<group>
-			<color R="0.91" G="0.59" B="0.48" />
-			<translate  Z="109" />
-			<rotate time="19.387"  axisY="1" />
+			<translate time="29.3233" >
+					<point X = " -109.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " -54.5 " Y = " 0.0 " Z = " 94.503 " />
+					<point X = " 54.5 " Y = " 0.0 " Z = " 94.503 " />
+					<point X = " 109.0 " Y = " 0.0 " Z = " 0.0 " />
+					<point X = " 54.5 " Y = " 0.0 " Z = " -94.503 " />
+					<point X = " -54.5 " Y = " 0.0 " Z = " -94.503 " />
+				</translate>
+
+				<rotate time="19.387"  axisY="1" />
+
 			<models>
-				<model file="sphere1.3d" texture=" mercury.jpg"/>
+				<model file="mercury.3d"  texture= "mercury.jpg" />
 			</models>
 		</group>
 
 		<group>
 			<color R="0.96" G="0.64" B="0.38" />
-			<translate  Z="142" />
+			<translate time="74.9000" >
+				<point X = " -142.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " -71.0 " Y = " 0.0 " Z = " 123.114 " />
+				<point X = " 71.0 " Y = " 0.0 " Z = " 123.114 " />
+				<point X = " 142.0 " Y = " 0.0 " Z = " 0.0 " />
+				<point X = " 71.0 " Y = " 0.0 " Z = " -123.114 " />
+				<point X = " -71.0 " Y = " 0.0 " Z = " -123.114 " />
+			</translate>
 			<rotate time="74.9"  axisY="1" />
 			<models>
-				<model file="sphere1.3d" texture=" venus.jpg" />
-			</models>
-		</group>
-
-
-
-		<group>
-			<rotate time="19.387"  axisY="1" />
-			<translate  Z="170" />
-			<rotate time="19.387"  axisY="1" />
-			<models>
-				<model file="sphere1.3d" texture= "earth.jpg" />
-			</models>
-		</group>
-
-		<group>
-
-			<translate  Z="170" />
-			<color R="0.75" G="0.75" B="0.75" />
-			<translate  Z="8" />
-			<rotate time="19.387"  axisY="1" />
-						
-			<models>
-				<model file="lua.3d" />
+				<model file="venus.3d" texture=" venus.jpg" />
 			</models>
 		</group>
 
 	</group>
+	
+	<group>
+		<models>
+			<model file="sun.3d"  emisR="0.5" emisG="0.5" emisB="0.5"/>
+		</models>
+	</group>
+
 </scene>

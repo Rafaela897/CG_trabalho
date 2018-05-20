@@ -1,7 +1,1009 @@
 <scene>
 	<lights>
-			<light type="DIRECTIONAL"  X="0" Y="0" Z="71" />
+			<light type="POINT"  X="1" Y="1" Z="1" />
 	</lights>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.952330" G="0.103313" B="0.549072"/>
+		<rotate  time="124.322136" axisY="1.000000" />
+	 	<translate  X="191.758469"  Z ="138.043442"/>
+		<scale X="0.185782" Y="0.057791" Z ="0.108321"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.547006" G="0.167611" B="0.910553"/>
+		<rotate  time="0.056549" axisY="1.000000" />
+	 	<translate  X="16.686907"  Z ="-240.190536"/>
+		<scale X="0.381843" Y="0.296303" Z ="0.234452"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.779555" G="0.477657" B="0.897118"/>
+		<rotate  time="76.503967" axisY="1.000000" />
+	 	<translate  X="-113.582542"  Z ="234.484802"/>
+		<scale X="0.169684" Y="0.221599" Z ="0.393858"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.971174" G="0.864439" B="0.040361"/>
+		<rotate  time="27.353443" axisY="1.000000" />
+	 	<translate  X="233.258347"  Z ="0.650972"/>
+		<scale X="0.327065" Y="0.355143" Z ="0.311393"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.435059" G="0.581483" B="0.877459"/>
+		<rotate  time="31.565374" axisY="1.000000" />
+	 	<translate  X="-54.670906"  Z ="261.235077"/>
+		<scale X="0.030578" Y="0.044775" Z ="0.495059"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.123445" G="0.376675" B="0.087141"/>
+		<rotate  time="19.739029" axisY="1.000000" />
+	 	<translate  X="62.196175"  Z ="225.820755"/>
+		<scale X="0.348252" Y="0.087794" Z ="0.020607"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.954024" G="0.253886" B="0.316365"/>
+		<rotate  time="15.725649" axisY="1.000000" />
+	 	<translate  X="-154.324081"  Z ="-203.251694"/>
+		<scale X="0.009387" Y="0.483236" Z ="0.058924"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.906238" G="0.935052" B="0.877565"/>
+		<rotate  time="122.221466" axisY="1.000000" />
+	 	<translate  X="-95.837975"  Z ="-228.388290"/>
+		<scale X="0.349454" Y="0.119274" Z ="0.350988"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.681565" G="0.230286" B="0.375380"/>
+		<rotate  time="103.124390" axisY="1.000000" />
+	 	<translate  X="-6.218735"  Z ="240.694275"/>
+		<scale X="0.017297" Y="0.105757" Z ="0.204454"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.691816" G="0.685548" B="0.838331"/>
+		<rotate  time="124.173386" axisY="1.000000" />
+	 	<translate  X="-178.987946"  Z ="-188.094681"/>
+		<scale X="0.057889" Y="0.153107" Z ="0.226772"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.060189" G="0.269210" B="0.777473"/>
+		<rotate  time="106.530563" axisY="1.000000" />
+	 	<translate  X="-188.787125"  Z ="-167.039993"/>
+		<scale X="0.199552" Y="0.048216" Z ="0.259696"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.769223" G="0.130403" B="0.408369"/>
+		<rotate  time="98.936386" axisY="1.000000" />
+	 	<translate  X="-25.087477"  Z ="-250.110260"/>
+		<scale X="0.414997" Y="0.345485" Z ="0.298844"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.312214" G="0.124942" B="0.738561"/>
+		<rotate  time="128.333496" axisY="1.000000" />
+	 	<translate  X="141.441833"  Z ="205.376419"/>
+		<scale X="0.381722" Y="0.077673" Z ="0.332970"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.592963" G="0.446450" B="0.939735"/>
+		<rotate  time="33.398464" axisY="1.000000" />
+	 	<translate  X="-115.931496"  Z ="-205.499557"/>
+		<scale X="0.219435" Y="0.341503" Z ="0.392195"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.219239" G="0.211741" B="0.986500"/>
+		<rotate  time="0.468037" axisY="1.000000" />
+	 	<translate  X="-41.359600"  Z ="240.997452"/>
+		<scale X="0.275324" Y="0.386435" Z ="0.151746"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.547572" G="0.952161" B="0.595178"/>
+		<rotate  time="104.272369" axisY="1.000000" />
+	 	<translate  X="-107.891258"  Z ="-211.041916"/>
+		<scale X="0.045768" Y="0.499785" Z ="0.316669"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.274972" G="0.039675" B="0.499482"/>
+		<rotate  time="88.828804" axisY="1.000000" />
+	 	<translate  X="4.973327"  Z ="246.755295"/>
+		<scale X="0.387296" Y="0.453508" Z ="0.292311"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.731426" G="0.661124" B="0.444887"/>
+		<rotate  time="25.479839" axisY="1.000000" />
+	 	<translate  X="-200.455444"  Z ="-118.736832"/>
+		<scale X="0.438845" Y="0.444210" Z ="0.273875"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.714858" G="0.341093" B="0.715511"/>
+		<rotate  time="24.341946" axisY="1.000000" />
+	 	<translate  X="-90.008438"  Z ="-240.258957"/>
+		<scale X="0.284296" Y="0.399937" Z ="0.159242"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.760837" G="0.474452" B="0.523391"/>
+		<rotate  time="107.486366" axisY="1.000000" />
+	 	<translate  X="261.895050"  Z ="-21.236799"/>
+		<scale X="0.161395" Y="0.347700" Z ="0.141811"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.115450" G="0.425795" B="0.841327"/>
+		<rotate  time="37.022549" axisY="1.000000" />
+	 	<translate  X="-82.017509"  Z ="222.003983"/>
+		<scale X="0.372852" Y="0.185354" Z ="0.489777"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.066197" G="0.570590" B="0.400306"/>
+		<rotate  time="3.203370" axisY="1.000000" />
+	 	<translate  X="182.477936"  Z ="-197.804749"/>
+		<scale X="0.304292" Y="0.073664" Z ="0.359027"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.679572" G="0.521616" B="0.812188"/>
+		<rotate  time="85.027252" axisY="1.000000" />
+	 	<translate  X="-203.451096"  Z ="128.865402"/>
+		<scale X="0.186547" Y="0.387956" Z ="0.220740"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.967670" G="0.809044" B="0.709796"/>
+		<rotate  time="2.598644" axisY="1.000000" />
+	 	<translate  X="-140.887955"  Z ="228.071472"/>
+		<scale X="0.150711" Y="0.107474" Z ="0.151971"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.242436" G="0.537102" B="0.696089"/>
+		<rotate  time="120.298172" axisY="1.000000" />
+	 	<translate  X="-70.602180"  Z ="254.391693"/>
+		<scale X="0.173288" Y="0.197321" Z ="0.003237"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.579721" G="0.558214" B="0.045869"/>
+		<rotate  time="76.641647" axisY="1.000000" />
+	 	<translate  X="26.551834"  Z ="246.443634"/>
+		<scale X="0.389351" Y="0.488554" Z ="0.064690"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.196171" G="0.700163" B="0.205108"/>
+		<rotate  time="112.653580" axisY="1.000000" />
+	 	<translate  X="213.747482"  Z ="-158.995407"/>
+		<scale X="0.190407" Y="0.113484" Z ="0.447902"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.765350" G="0.316468" B="0.963195"/>
+		<rotate  time="75.151108" axisY="1.000000" />
+	 	<translate  X="-141.390228"  Z ="-218.874130"/>
+		<scale X="0.190344" Y="0.365268" Z ="0.257031"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.734016" G="0.882423" B="0.968969"/>
+		<rotate  time="126.960999" axisY="1.000000" />
+	 	<translate  X="-227.214813"  Z ="133.833038"/>
+		<scale X="0.356577" Y="0.460319" Z ="0.408549"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.568631" G="0.100331" B="0.533448"/>
+		<rotate  time="10.667433" axisY="1.000000" />
+	 	<translate  X="-195.665909"  Z ="-166.331772"/>
+		<scale X="0.454790" Y="0.359821" Z ="0.401456"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.535041" G="0.053901" B="0.093486"/>
+		<rotate  time="122.925919" axisY="1.000000" />
+	 	<translate  X="232.804138"  Z ="65.272568"/>
+		<scale X="0.491424" Y="0.146416" Z ="0.013580"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.993993" G="0.376345" B="0.891396"/>
+		<rotate  time="15.358717" axisY="1.000000" />
+	 	<translate  X="-262.699341"  Z ="-13.870372"/>
+		<scale X="0.266907" Y="0.372490" Z ="0.111784"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.034689" G="0.077495" B="0.814604"/>
+		<rotate  time="128.718597" axisY="1.000000" />
+	 	<translate  X="-190.248627"  Z ="183.050629"/>
+		<scale X="0.290625" Y="0.414885" Z ="0.355841"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.061983" G="0.580069" B="0.109302"/>
+		<rotate  time="24.992161" axisY="1.000000" />
+	 	<translate  X="-239.875580"  Z ="16.107203"/>
+		<scale X="0.298133" Y="0.307109" Z ="0.440054"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.524395" G="0.949808" B="0.177292"/>
+		<rotate  time="30.453981" axisY="1.000000" />
+	 	<translate  X="179.383514"  Z ="201.025482"/>
+		<scale X="0.073067" Y="0.184279" Z ="0.173761"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.760808" G="0.090311" B="0.664661"/>
+		<rotate  time="110.958611" axisY="1.000000" />
+	 	<translate  X="93.599754"  Z ="235.093689"/>
+		<scale X="0.127814" Y="0.280321" Z ="0.415179"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.422724" G="0.472124" B="0.703663"/>
+		<rotate  time="6.658832" axisY="1.000000" />
+	 	<translate  X="134.783218"  Z ="-210.509064"/>
+		<scale X="0.389164" Y="0.353643" Z ="0.077163"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.671862" G="0.999789" B="0.001130"/>
+		<rotate  time="106.578163" axisY="1.000000" />
+	 	<translate  X="116.096596"  Z ="224.405807"/>
+		<scale X="0.415398" Y="0.110731" Z ="0.146922"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.845108" G="0.573244" B="0.580941"/>
+		<rotate  time="52.802979" axisY="1.000000" />
+	 	<translate  X="-230.872864"  Z ="139.694153"/>
+		<scale X="0.351702" Y="0.456105" Z ="0.042090"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.880471" G="0.219909" B="0.043637"/>
+		<rotate  time="86.866714" axisY="1.000000" />
+	 	<translate  X="-37.477493"  Z ="231.523285"/>
+		<scale X="0.266338" Y="0.157875" Z ="0.132860"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.819662" G="0.167044" B="0.949321"/>
+		<rotate  time="86.734947" axisY="1.000000" />
+	 	<translate  X="-240.213104"  Z ="83.664536"/>
+		<scale X="0.183507" Y="0.450028" Z ="0.166560"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.139353" G="0.492475" B="0.510526"/>
+		<rotate  time="52.254501" axisY="1.000000" />
+	 	<translate  X="107.069565"  Z ="219.508270"/>
+		<scale X="0.431836" Y="0.479899" Z ="0.097388"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.888420" G="0.391979" B="0.943131"/>
+		<rotate  time="118.465027" axisY="1.000000" />
+	 	<translate  X="251.823212"  Z ="-88.588478"/>
+		<scale X="0.089019" Y="0.452685" Z ="0.391479"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.129811" G="0.471984" B="0.498758"/>
+		<rotate  time="117.747147" axisY="1.000000" />
+	 	<translate  X="-154.350372"  Z ="186.106674"/>
+		<scale X="0.091584" Y="0.146973" Z ="0.296694"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.227082" G="0.099188" B="0.441678"/>
+		<rotate  time="36.218880" axisY="1.000000" />
+	 	<translate  X="-210.203384"  Z ="-159.690323"/>
+		<scale X="0.244623" Y="0.069279" Z ="0.440579"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.087900" G="0.087862" B="0.522649"/>
+		<rotate  time="28.857801" axisY="1.000000" />
+	 	<translate  X="-204.735748"  Z ="112.059029"/>
+		<scale X="0.156250" Y="0.149604" Z ="0.007598"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.834495" G="0.018676" B="0.072804"/>
+		<rotate  time="120.448692" axisY="1.000000" />
+	 	<translate  X="-196.791306"  Z ="-162.966476"/>
+		<scale X="0.474246" Y="0.190216" Z ="0.188822"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.400360" G="0.023880" B="0.314767"/>
+		<rotate  time="69.552940" axisY="1.000000" />
+	 	<translate  X="-3.596529"  Z ="-247.171448"/>
+		<scale X="0.285325" Y="0.191060" Z ="0.157462"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.497496" G="0.603573" B="0.270376"/>
+		<rotate  time="3.681425" axisY="1.000000" />
+	 	<translate  X="178.176682"  Z ="158.425003"/>
+		<scale X="0.424347" Y="0.290994" Z ="0.444981"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.152538" G="0.090081" B="0.352632"/>
+		<rotate  time="34.867283" axisY="1.000000" />
+	 	<translate  X="-244.379623"  Z ="45.742775"/>
+		<scale X="0.185673" Y="0.040172" Z ="0.155458"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.208404" G="0.446065" B="0.553566"/>
+		<rotate  time="66.992325" axisY="1.000000" />
+	 	<translate  X="-165.247147"  Z ="194.188339"/>
+		<scale X="0.368807" Y="0.037359" Z ="0.236611"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.486613" G="0.530635" B="0.242873"/>
+		<rotate  time="68.047729" axisY="1.000000" />
+	 	<translate  X="-236.250580"  Z ="-9.469069"/>
+		<scale X="0.393846" Y="0.246521" Z ="0.058267"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.946554" G="0.507656" B="0.482632"/>
+		<rotate  time="0.082491" axisY="1.000000" />
+	 	<translate  X="-133.967865"  Z ="198.060867"/>
+		<scale X="0.302757" Y="0.346274" Z ="0.017408"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.245845" G="0.014408" B="0.455038"/>
+		<rotate  time="76.762421" axisY="1.000000" />
+	 	<translate  X="-193.562592"  Z ="-142.878448"/>
+		<scale X="0.403314" Y="0.292365" Z ="0.094977"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.236896" G="0.985261" B="0.624446"/>
+		<rotate  time="35.050896" axisY="1.000000" />
+	 	<translate  X="181.978470"  Z ="-162.430176"/>
+		<scale X="0.446035" Y="0.189874" Z ="0.465949"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.617885" G="0.072969" B="0.119792"/>
+		<rotate  time="43.048363" axisY="1.000000" />
+	 	<translate  X="-180.718292"  Z ="-191.235138"/>
+		<scale X="0.419275" Y="0.148057" Z ="0.001717"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.094138" G="0.467157" B="0.060524"/>
+		<rotate  time="26.310997" axisY="1.000000" />
+	 	<translate  X="66.366142"  Z ="-227.983582"/>
+		<scale X="0.402074" Y="0.309936" Z ="0.301653"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.111662" G="0.278970" B="0.861198"/>
+		<rotate  time="111.316177" axisY="1.000000" />
+	 	<translate  X="164.547653"  Z ="-189.215591"/>
+		<scale X="0.312571" Y="0.085871" Z ="0.130399"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.560643" G="0.823586" B="0.267123"/>
+		<rotate  time="2.055619" axisY="1.000000" />
+	 	<translate  X="206.945511"  Z ="109.562454"/>
+		<scale X="0.024662" Y="0.477703" Z ="0.020118"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.577104" G="0.204468" B="0.170887"/>
+		<rotate  time="79.636803" axisY="1.000000" />
+	 	<translate  X="71.173645"  Z ="223.761932"/>
+		<scale X="0.249785" Y="0.077571" Z ="0.107741"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.640085" G="0.631688" B="0.211159"/>
+		<rotate  time="58.742882" axisY="1.000000" />
+	 	<translate  X="-128.470612"  Z ="-216.191803"/>
+		<scale X="0.322806" Y="0.373612" Z ="0.215057"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.576414" G="0.773356" B="0.742141"/>
+		<rotate  time="81.611801" axisY="1.000000" />
+	 	<translate  X="253.631821"  Z ="30.587084"/>
+		<scale X="0.325031" Y="0.117321" Z ="0.321632"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.024666" G="0.319526" B="0.084897"/>
+		<rotate  time="115.567757" axisY="1.000000" />
+	 	<translate  X="-269.555969"  Z ="5.637799"/>
+		<scale X="0.269017" Y="0.441708" Z ="0.236998"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.310735" G="0.486856" B="0.937811"/>
+		<rotate  time="46.693501" axisY="1.000000" />
+	 	<translate  X="-252.219910"  Z ="-65.625870"/>
+		<scale X="0.303515" Y="0.175234" Z ="0.169414"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.979539" G="0.950954" B="0.269850"/>
+		<rotate  time="103.192551" axisY="1.000000" />
+	 	<translate  X="201.190903"  Z ="-170.812332"/>
+		<scale X="0.174960" Y="0.019717" Z ="0.315599"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.632794" G="0.320896" B="0.379874"/>
+		<rotate  time="93.473579" axisY="1.000000" />
+	 	<translate  X="-107.028625"  Z ="-228.654877"/>
+		<scale X="0.206665" Y="0.020710" Z ="0.031214"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.777361" G="0.128214" B="0.910073"/>
+		<rotate  time="122.116928" axisY="1.000000" />
+	 	<translate  X="174.526245"  Z ="196.697098"/>
+		<scale X="0.410445" Y="0.041081" Z ="0.251202"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.315029" G="0.463872" B="0.941867"/>
+		<rotate  time="113.256775" axisY="1.000000" />
+	 	<translate  X="-119.834221"  Z ="-209.559158"/>
+		<scale X="0.077679" Y="0.314177" Z ="0.202397"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.769376" G="0.537175" B="0.573043"/>
+		<rotate  time="45.866936" axisY="1.000000" />
+	 	<translate  X="-233.744049"  Z ="-29.429073"/>
+		<scale X="0.159812" Y="0.450944" Z ="0.167560"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.825877" G="0.361551" B="0.763509"/>
+		<rotate  time="43.114498" axisY="1.000000" />
+	 	<translate  X="-102.216537"  Z ="-212.077515"/>
+		<scale X="0.300791" Y="0.189197" Z ="0.265997"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.029541" G="0.024364" B="0.280917"/>
+		<rotate  time="10.633935" axisY="1.000000" />
+	 	<translate  X="-191.676788"  Z ="181.911560"/>
+		<scale X="0.266364" Y="0.183110" Z ="0.385843"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.216755" G="0.898293" B="0.747603"/>
+		<rotate  time="66.167648" axisY="1.000000" />
+	 	<translate  X="-1.213758"  Z ="-262.306549"/>
+		<scale X="0.106894" Y="0.334212" Z ="0.290756"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.584193" G="0.214341" B="0.281109"/>
+		<rotate  time="119.123070" axisY="1.000000" />
+	 	<translate  X="-165.643997"  Z ="175.618225"/>
+		<scale X="0.310412" Y="0.072590" Z ="0.134458"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.316305" G="0.372412" B="0.176171"/>
+		<rotate  time="128.351517" axisY="1.000000" />
+	 	<translate  X="-229.175323"  Z ="-106.698021"/>
+		<scale X="0.080663" Y="0.307486" Z ="0.455593"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.995315" G="0.691690" B="0.594960"/>
+		<rotate  time="86.567230" axisY="1.000000" />
+	 	<translate  X="185.400299"  Z ="-140.996231"/>
+		<scale X="0.058096" Y="0.499585" Z ="0.250308"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.052982" G="0.498939" B="0.279795"/>
+		<rotate  time="124.377785" axisY="1.000000" />
+	 	<translate  X="-246.237076"  Z ="-40.456364"/>
+		<scale X="0.241672" Y="0.168806" Z ="0.332412"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.028443" G="0.165593" B="0.430350"/>
+		<rotate  time="89.431442" axisY="1.000000" />
+	 	<translate  X="230.873764"  Z ="-36.090370"/>
+		<scale X="0.251130" Y="0.341124" Z ="0.046369"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.625269" G="0.323083" B="0.554750"/>
+		<rotate  time="123.341125" axisY="1.000000" />
+	 	<translate  X="238.742096"  Z ="-114.516129"/>
+		<scale X="0.486531" Y="0.091372" Z ="0.372267"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.846462" G="0.603238" B="0.177853"/>
+		<rotate  time="121.156807" axisY="1.000000" />
+	 	<translate  X="-259.762848"  Z ="25.912485"/>
+		<scale X="0.435323" Y="0.050490" Z ="0.247803"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.254644" G="0.660912" B="0.998456"/>
+		<rotate  time="96.782150" axisY="1.000000" />
+	 	<translate  X="-75.721260"  Z ="-251.405670"/>
+		<scale X="0.385111" Y="0.395132" Z ="0.448738"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.646179" G="0.756461" B="0.659028"/>
+		<rotate  time="36.854053" axisY="1.000000" />
+	 	<translate  X="153.876678"  Z ="-196.073639"/>
+		<scale X="0.289166" Y="0.079169" Z ="0.389808"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.588086" G="0.824215" B="0.239115"/>
+		<rotate  time="40.194454" axisY="1.000000" />
+	 	<translate  X="164.680267"  Z ="-207.280289"/>
+		<scale X="0.185980" Y="0.010998" Z ="0.336538"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.467856" G="0.061030" B="0.098205"/>
+		<rotate  time="73.403404" axisY="1.000000" />
+	 	<translate  X="-28.572325"  Z ="-264.681458"/>
+		<scale X="0.240829" Y="0.432708" Z ="0.249473"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.844480" G="0.435136" B="0.209023"/>
+		<rotate  time="45.110706" axisY="1.000000" />
+	 	<translate  X="-39.955574"  Z ="245.719574"/>
+		<scale X="0.414259" Y="0.472272" Z ="0.049782"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.169404" G="0.398813" B="0.213591"/>
+		<rotate  time="2.886534" axisY="1.000000" />
+	 	<translate  X="-192.888306"  Z ="-130.410095"/>
+		<scale X="0.214705" Y="0.326546" Z ="0.059873"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.095250" G="0.098346" B="0.499903"/>
+		<rotate  time="92.401314" axisY="1.000000" />
+	 	<translate  X="192.612793"  Z ="-154.843491"/>
+		<scale X="0.212364" Y="0.048671" Z ="0.420757"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.040890" G="0.004152" B="0.412049"/>
+		<rotate  time="27.146910" axisY="1.000000" />
+	 	<translate  X="213.604050"  Z ="-139.433975"/>
+		<scale X="0.389255" Y="0.471490" Z ="0.127578"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.636797" G="0.961822" B="0.066246"/>
+		<rotate  time="61.702202" axisY="1.000000" />
+	 	<translate  X="156.380219"  Z ="-171.733948"/>
+		<scale X="0.372056" Y="0.268546" Z ="0.484452"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.059656" G="0.083584" B="0.398152"/>
+		<rotate  time="100.844673" axisY="1.000000" />
+	 	<translate  X="123.094131"  Z ="206.681641"/>
+		<scale X="0.489107" Y="0.386680" Z ="0.333662"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.749737" G="0.576800" B="0.154352"/>
+		<rotate  time="53.800842" axisY="1.000000" />
+	 	<translate  X="-111.770905"  Z ="223.669037"/>
+		<scale X="0.292573" Y="0.299293" Z ="0.190496"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.566856" G="0.145346" B="0.686646"/>
+		<rotate  time="122.272354" axisY="1.000000" />
+	 	<translate  X="233.183838"  Z ="-48.603203"/>
+		<scale X="0.121468" Y="0.280100" Z ="0.044030"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.537797" G="0.107396" B="0.636730"/>
+		<rotate  time="56.463337" axisY="1.000000" />
+	 	<translate  X="-217.240967"  Z ="103.420525"/>
+		<scale X="0.137175" Y="0.002598" Z ="0.162293"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.854513" G="0.774732" B="0.432300"/>
+		<rotate  time="74.622581" axisY="1.000000" />
+	 	<translate  X="107.696350"  Z ="-238.072159"/>
+		<scale X="0.085929" Y="0.121436" Z ="0.092372"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.369602" G="0.076474" B="0.511087"/>
+		<rotate  time="117.372620" axisY="1.000000" />
+	 	<translate  X="-41.851124"  Z ="-259.595215"/>
+		<scale X="0.138435" Y="0.411515" Z ="0.199579"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.495371" G="0.493927" B="0.291741"/>
+		<rotate  time="119.944717" axisY="1.000000" />
+	 	<translate  X="-177.939392"  Z ="170.009445"/>
+		<scale X="0.128130" Y="0.270197" Z ="0.422512"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.602652" G="0.276970" B="0.816067"/>
+		<rotate  time="20.396856" axisY="1.000000" />
+	 	<translate  X="-105.402412"  Z ="-226.255920"/>
+		<scale X="0.126751" Y="0.451456" Z ="0.301373"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.538587" G="0.833816" B="0.539495"/>
+		<rotate  time="90.898094" axisY="1.000000" />
+	 	<translate  X="-61.795425"  Z ="245.196808"/>
+		<scale X="0.116165" Y="0.148604" Z ="0.332698"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.011093" G="0.403605" B="0.975266"/>
+		<rotate  time="15.563790" axisY="1.000000" />
+	 	<translate  X="36.597042"  Z ="260.803925"/>
+		<scale X="0.009443" Y="0.135524" Z ="0.346164"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.422558" G="0.865713" B="0.948008"/>
+		<rotate  time="11.345984" axisY="1.000000" />
+	 	<translate  X="-263.884064"  Z ="-19.013863"/>
+		<scale X="0.066559" Y="0.316692" Z ="0.325400"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+	<group>
+		<scale X="0.300000" Y="0.300000" Z ="0.300000"/>
+		<color R = "0.730997" G="0.857837" B="0.082170"/>
+		<rotate  time="43.629219" axisY="1.000000" />
+	 	<translate  X="-230.160751"  Z ="-105.924438"/>
+		<scale X="0.474587" Y="0.115194" Z ="0.486617"/>
+		<models>
+			<model file ="torus.3d"/>
+		</models>
+	</group>
+
+
 	<group>
 		<scale X="0.3" Y="0.3" Z="0.3"/>	
 		<models>
@@ -119,9 +1121,8 @@
 			<color R="0.98" G="0.92" B="0.84" />
 			
 			<rotate time="538.375"  axisY="1" />
-			
-			<rotate angle="-60" X= "0" Y="1" Z="0" />
 			<translate  Z="549" />
+			<rotate angle="-60" axisX= "1" axisY="0" axisZ="0" />
 		
 			<models>
 				<model file="ring.3d" texture="saturnring.png"/>
@@ -150,4 +1151,12 @@
 		</group>		
 
 	</group>
+
+	<group>
+		<scale X="0.3" Y="0.3" Z="0.3"/>
+		<models>
+			<model file="sun.3d"  emisR="0.7" emisG="0.7" emisB="0.7"/>
+		</models>
+	</group>
+
 </scene>

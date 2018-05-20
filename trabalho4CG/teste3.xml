@@ -1,7 +1,7 @@
 <scene>
 	<group>
 		<models>
-			<model file="plano.3d"  texture="4.png" />
+			<model file="plano.3d"  texture="1.png" />
 		</models>
 	</group>
 </scene>

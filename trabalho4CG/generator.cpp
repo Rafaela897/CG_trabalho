@@ -807,32 +807,32 @@ void drawPlane(string fileName,float X=2,float Z=2)
 
 	
 	myfile << -x << " " << "0.0" << " " << z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 0 << " " << 0 << endl;
 
 
 	myfile << x << " " << "0.0" << " " << -z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 1 << " " << 1 << endl;
 
 
 	myfile << x << " " << "0.0" << " " << z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 1<< " " << 0 << endl;
 
 
 
 	myfile << x << " " << "0.0" << " " << -z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 1 << " " << 1 << endl;
 
 	myfile << -x << " " << "0.0" << " " << z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 0 << " " << 0 << endl;
 
 
 	myfile << -x << " " << "0.0" << " " << -z << endl;
-	myfile << 0 << " " << 1 << " " << 0 << endl;
+	myfile << 0 << " " << -1 << " " << 0 << endl;
 	myfile << 0 << " " << 1 << endl;
 
 

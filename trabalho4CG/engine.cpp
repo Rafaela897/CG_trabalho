@@ -801,11 +801,11 @@ void execTransform(pTransformation t, bool flag){
 		{
 			if (t->time==0.0){
 				//cout << "ROTATE " << endl;
-				cout << "TIME ==0" << endl;
+				//cout << "TIME ==0" << endl;
 				glRotatef(t->angle,t->xx,t->yy,t->zz);
 			
 			}else{
-				cout << "TIME!=0" << endl;
+				//cout << "TIME!=0" << endl;
 				float time=t->time;
 
 				int gt = glutGet(GLUT_ELAPSED_TIME);
@@ -833,6 +833,7 @@ void execTransform(pTransformation t, bool flag){
 		case 5:
 		{			
             GLfloat diff[4] = {t->xx, t->yy, t->zz, 1.0};
+			glMaterialfv(GL_FRONT, GL_DIFFUSE, diff);
             glLightfv(currentLight, GL_DIFFUSE, diff);
             currentLight+=1;
 			break;
@@ -841,7 +842,7 @@ void execTransform(pTransformation t, bool flag){
 		{			
             GLfloat spec[4] = {t->xx, t->yy, t->zz, 1.0};
 			glMaterialfv(GL_FRONT, GL_SPECULAR, spec);
-            glLightfv(currentLight, GL_SPECULAR, spec);
+            glLightfv(GL_LIGHT0, GL_SPECULAR, spec);
             currentLight+=1;    
 			break;
 		}
@@ -849,15 +850,17 @@ void execTransform(pTransformation t, bool flag){
 		{
 			
             GLfloat emi[4] = {t->xx, t->yy, t->zz, 1.0};
+           
             glMaterialfv(GL_FRONT, GL_EMISSION, emi);
             glLightfv(currentLight, GL_EMISSION,emi);
-            glEnable(currentLight);
             currentLight+=1;
+           
 			break;
 		}
 		case 8:
 		{
             GLfloat amb[4] = {t->xx, t->yy, t->zz, 1.0};
+			glMaterialfv(GL_FRONT, GL_AMBIENT, amb);
             glLightfv(currentLight, GL_AMBIENT, amb);
             currentLight+=1;
 			break;
@@ -1281,7 +1284,7 @@ int main(int argc, char **argv)
 		cout << "canDraw: " << vecTransform[i].canDraw << endl;
 		for(int j=0;j< vecTransform[i].points.size();j++)
 			cout << "elem " << j <<" : " <<  vecTransform[i].points[j] << endl;
-		cout << "time: " << vecTransform[i].time <<  endl;
+		//cout << "time: " << vecTransform[i].time <<  endl;
 	}
 
 	cout << endl;
